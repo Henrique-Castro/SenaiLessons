@@ -1,0 +1,11 @@
+C:\Users\46885473820\Documents\Senai\TecDes-Senai\C#\nomeSobrenome\bin\Debug\netcoreapp2.1\nomeSobrenome.deps.json
+C:\Users\46885473820\Documents\Senai\TecDes-Senai\C#\nomeSobrenome\bin\Debug\netcoreapp2.1\nomeSobrenome.runtimeconfig.json
+C:\Users\46885473820\Documents\Senai\TecDes-Senai\C#\nomeSobrenome\bin\Debug\netcoreapp2.1\nomeSobrenome.runtimeconfig.dev.json
+C:\Users\46885473820\Documents\Senai\TecDes-Senai\C#\nomeSobrenome\bin\Debug\netcoreapp2.1\nomeSobrenome.dll
+C:\Users\46885473820\Documents\Senai\TecDes-Senai\C#\nomeSobrenome\bin\Debug\netcoreapp2.1\nomeSobrenome.pdb
+C:\Users\46885473820\Documents\Senai\TecDes-Senai\C#\nomeSobrenome\obj\Debug\netcoreapp2.1\nomeSobrenome.csprojAssemblyReference.cache
+C:\Users\46885473820\Documents\Senai\TecDes-Senai\C#\nomeSobrenome\obj\Debug\netcoreapp2.1\nomeSobrenome.csproj.CoreCompileInputs.cache
+C:\Users\46885473820\Documents\Senai\TecDes-Senai\C#\nomeSobrenome\obj\Debug\netcoreapp2.1\nomeSobrenome.AssemblyInfoInputs.cache
+C:\Users\46885473820\Documents\Senai\TecDes-Senai\C#\nomeSobrenome\obj\Debug\netcoreapp2.1\nomeSobrenome.AssemblyInfo.cs
+C:\Users\46885473820\Documents\Senai\TecDes-Senai\C#\nomeSobrenome\obj\Debug\netcoreapp2.1\nomeSobrenome.dll
+C:\Users\46885473820\Documents\Senai\TecDes-Senai\C#\nomeSobrenome\obj\Debug\netcoreapp2.1\nomeSobrenome.pdb

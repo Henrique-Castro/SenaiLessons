@@ -1,0 +1,11 @@
+C:\Users\46885473820\Documents\aulas\C#\sistemaDeNotasArray\obj\Debug\netcoreapp2.1\sistemaDeNotasArray.csprojAssemblyReference.cache
+C:\Users\46885473820\Documents\aulas\C#\sistemaDeNotasArray\obj\Debug\netcoreapp2.1\sistemaDeNotasArray.csproj.CoreCompileInputs.cache
+C:\Users\46885473820\Documents\aulas\C#\sistemaDeNotasArray\obj\Debug\netcoreapp2.1\sistemaDeNotasArray.AssemblyInfoInputs.cache
+C:\Users\46885473820\Documents\aulas\C#\sistemaDeNotasArray\obj\Debug\netcoreapp2.1\sistemaDeNotasArray.AssemblyInfo.cs
+C:\Users\46885473820\Documents\aulas\C#\sistemaDeNotasArray\bin\Debug\netcoreapp2.1\sistemaDeNotasArray.deps.json
+C:\Users\46885473820\Documents\aulas\C#\sistemaDeNotasArray\bin\Debug\netcoreapp2.1\sistemaDeNotasArray.runtimeconfig.json
+C:\Users\46885473820\Documents\aulas\C#\sistemaDeNotasArray\bin\Debug\netcoreapp2.1\sistemaDeNotasArray.runtimeconfig.dev.json
+C:\Users\46885473820\Documents\aulas\C#\sistemaDeNotasArray\bin\Debug\netcoreapp2.1\sistemaDeNotasArray.dll
+C:\Users\46885473820\Documents\aulas\C#\sistemaDeNotasArray\bin\Debug\netcoreapp2.1\sistemaDeNotasArray.pdb
+C:\Users\46885473820\Documents\aulas\C#\sistemaDeNotasArray\obj\Debug\netcoreapp2.1\sistemaDeNotasArray.dll
+C:\Users\46885473820\Documents\aulas\C#\sistemaDeNotasArray\obj\Debug\netcoreapp2.1\sistemaDeNotasArray.pdb

@@ -1,0 +1,11 @@
+C:\Users\46885473820\Documents\aulas\C#\balada\bin\Debug\netcoreapp2.1\balada.deps.json
+C:\Users\46885473820\Documents\aulas\C#\balada\bin\Debug\netcoreapp2.1\balada.runtimeconfig.json
+C:\Users\46885473820\Documents\aulas\C#\balada\bin\Debug\netcoreapp2.1\balada.runtimeconfig.dev.json
+C:\Users\46885473820\Documents\aulas\C#\balada\bin\Debug\netcoreapp2.1\balada.dll
+C:\Users\46885473820\Documents\aulas\C#\balada\bin\Debug\netcoreapp2.1\balada.pdb
+C:\Users\46885473820\Documents\aulas\C#\balada\obj\Debug\netcoreapp2.1\balada.csprojAssemblyReference.cache
+C:\Users\46885473820\Documents\aulas\C#\balada\obj\Debug\netcoreapp2.1\balada.csproj.CoreCompileInputs.cache
+C:\Users\46885473820\Documents\aulas\C#\balada\obj\Debug\netcoreapp2.1\balada.AssemblyInfoInputs.cache
+C:\Users\46885473820\Documents\aulas\C#\balada\obj\Debug\netcoreapp2.1\balada.AssemblyInfo.cs
+C:\Users\46885473820\Documents\aulas\C#\balada\obj\Debug\netcoreapp2.1\balada.dll
+C:\Users\46885473820\Documents\aulas\C#\balada\obj\Debug\netcoreapp2.1\balada.pdb

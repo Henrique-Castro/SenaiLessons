@@ -1,0 +1,11 @@
+C:\Users\46885473820\Documents\aulas\C#\While\obj\Debug\netcoreapp2.1\While.csprojAssemblyReference.cache
+C:\Users\46885473820\Documents\aulas\C#\While\obj\Debug\netcoreapp2.1\While.csproj.CoreCompileInputs.cache
+C:\Users\46885473820\Documents\aulas\C#\While\obj\Debug\netcoreapp2.1\While.AssemblyInfoInputs.cache
+C:\Users\46885473820\Documents\aulas\C#\While\obj\Debug\netcoreapp2.1\While.AssemblyInfo.cs
+C:\Users\46885473820\Documents\aulas\C#\While\bin\Debug\netcoreapp2.1\While.deps.json
+C:\Users\46885473820\Documents\aulas\C#\While\bin\Debug\netcoreapp2.1\While.runtimeconfig.json
+C:\Users\46885473820\Documents\aulas\C#\While\bin\Debug\netcoreapp2.1\While.runtimeconfig.dev.json
+C:\Users\46885473820\Documents\aulas\C#\While\bin\Debug\netcoreapp2.1\While.dll
+C:\Users\46885473820\Documents\aulas\C#\While\bin\Debug\netcoreapp2.1\While.pdb
+C:\Users\46885473820\Documents\aulas\C#\While\obj\Debug\netcoreapp2.1\While.dll
+C:\Users\46885473820\Documents\aulas\C#\While\obj\Debug\netcoreapp2.1\While.pdb
