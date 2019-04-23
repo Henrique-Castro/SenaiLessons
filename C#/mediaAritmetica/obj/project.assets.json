@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\46885473820\\Documents\\aulas\\C#\\mediaAritmetica\\sistemaNotas.csproj",
+      "projectUniqueName": "c:\\Users\\46885473820\\Documents\\SenaiLessons\\C#\\mediaAritmetica\\sistemaNotas.csproj",
       "projectName": "sistemaNotas",
-      "projectPath": "c:\\Users\\46885473820\\Documents\\aulas\\C#\\mediaAritmetica\\sistemaNotas.csproj",
+      "projectPath": "c:\\Users\\46885473820\\Documents\\SenaiLessons\\C#\\mediaAritmetica\\sistemaNotas.csproj",
       "packagesPath": "C:\\Users\\46885473820\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\46885473820\\Documents\\aulas\\C#\\mediaAritmetica\\obj\\",
+      "outputPath": "c:\\Users\\46885473820\\Documents\\SenaiLessons\\C#\\mediaAritmetica\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

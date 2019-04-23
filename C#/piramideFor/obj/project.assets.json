@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\46885473820\\Documents\\aulas\\C#\\piramideFor\\piramideFor.csproj",
+      "projectUniqueName": "c:\\Users\\46885473820\\Documents\\SenaiLessons\\C#\\piramideFor\\piramideFor.csproj",
       "projectName": "piramideFor",
-      "projectPath": "C:\\Users\\46885473820\\Documents\\aulas\\C#\\piramideFor\\piramideFor.csproj",
+      "projectPath": "c:\\Users\\46885473820\\Documents\\SenaiLessons\\C#\\piramideFor\\piramideFor.csproj",
       "packagesPath": "C:\\Users\\46885473820\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\46885473820\\Documents\\aulas\\C#\\piramideFor\\obj\\",
+      "outputPath": "c:\\Users\\46885473820\\Documents\\SenaiLessons\\C#\\piramideFor\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\46885473820\\Documents\\aulas\\C#\\dateTimeAviao\\dateTimeAviao.csproj",
+      "projectUniqueName": "c:\\Users\\46885473820\\Documents\\SenaiLessons\\C#\\dateTimeAviao\\dateTimeAviao.csproj",
       "projectName": "dateTimeAviao",
-      "projectPath": "C:\\Users\\46885473820\\Documents\\aulas\\C#\\dateTimeAviao\\dateTimeAviao.csproj",
+      "projectPath": "c:\\Users\\46885473820\\Documents\\SenaiLessons\\C#\\dateTimeAviao\\dateTimeAviao.csproj",
       "packagesPath": "C:\\Users\\46885473820\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\46885473820\\Documents\\aulas\\C#\\dateTimeAviao\\obj\\",
+      "outputPath": "c:\\Users\\46885473820\\Documents\\SenaiLessons\\C#\\dateTimeAviao\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

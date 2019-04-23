@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\46885473820\\Documents\\aulas\\C#\\parOuImpar\\desafio.csproj",
+      "projectUniqueName": "c:\\Users\\46885473820\\Documents\\SenaiLessons\\C#\\parOuImpar\\desafio.csproj",
       "projectName": "desafio",
-      "projectPath": "C:\\Users\\46885473820\\Documents\\aulas\\C#\\parOuImpar\\desafio.csproj",
+      "projectPath": "c:\\Users\\46885473820\\Documents\\SenaiLessons\\C#\\parOuImpar\\desafio.csproj",
       "packagesPath": "C:\\Users\\46885473820\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\46885473820\\Documents\\aulas\\C#\\parOuImpar\\obj\\",
+      "outputPath": "c:\\Users\\46885473820\\Documents\\SenaiLessons\\C#\\parOuImpar\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

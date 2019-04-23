@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\46885473820\\Documents\\aulas\\C#\\nomeSobrenome\\nomeSobrenome.csproj",
+      "projectUniqueName": "c:\\Users\\46885473820\\Documents\\SenaiLessons\\C#\\nomeSobrenome\\nomeSobrenome.csproj",
       "projectName": "nomeSobrenome",
-      "projectPath": "c:\\Users\\46885473820\\Documents\\aulas\\C#\\nomeSobrenome\\nomeSobrenome.csproj",
+      "projectPath": "c:\\Users\\46885473820\\Documents\\SenaiLessons\\C#\\nomeSobrenome\\nomeSobrenome.csproj",
       "packagesPath": "C:\\Users\\46885473820\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\46885473820\\Documents\\aulas\\C#\\nomeSobrenome\\obj\\",
+      "outputPath": "c:\\Users\\46885473820\\Documents\\SenaiLessons\\C#\\nomeSobrenome\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

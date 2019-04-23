@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\46885473820\\Documents\\aulas\\C#\\numeroInteiro\\numeroInteiro.csproj",
+      "projectUniqueName": "c:\\Users\\46885473820\\Documents\\SenaiLessons\\C#\\numeroInteiro\\numeroInteiro.csproj",
       "projectName": "numeroInteiro",
-      "projectPath": "c:\\Users\\46885473820\\Documents\\aulas\\C#\\numeroInteiro\\numeroInteiro.csproj",
+      "projectPath": "c:\\Users\\46885473820\\Documents\\SenaiLessons\\C#\\numeroInteiro\\numeroInteiro.csproj",
       "packagesPath": "C:\\Users\\46885473820\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\46885473820\\Documents\\aulas\\C#\\numeroInteiro\\obj\\",
+      "outputPath": "c:\\Users\\46885473820\\Documents\\SenaiLessons\\C#\\numeroInteiro\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
