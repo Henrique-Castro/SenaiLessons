@@ -9,6 +9,7 @@ namespace desafioPizzaria {
         public string Senha { get; set; }
         public DateTime DataCriacao { get; set; }
         static Usuario[] arrayUsuarios = new Usuario[1000];
+        public static bool logado = false;
 
         public static void Inserir () {
             string nome, email, senha;
@@ -47,16 +48,32 @@ namespace desafioPizzaria {
             string email = Console.ReadLine ();
             System.Console.WriteLine ("Digite a senha: ");
             string senha = Console.ReadLine ();
-
+            do{
             foreach (var usuario in arrayUsuarios) {
+                if(usuario == null){
+                    break;
+                }
                 if (usuario.Email.Equals (email) && usuario.Senha.Equals (senha)) {
+                    Console.ForegroundColor = ConsoleColor.Green;
                     System.Console.WriteLine ("Login efetuado com sucesso");
+                    Console.ResetColor ();
+                    System.Console.WriteLine ("\nPressione ENTER para voltar ao menu.");
+                    Console.ReadLine ();
+                    logado = true;
+
                     return;
                 } else {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     System.Console.WriteLine ("Usuário ou senha não encontrados");
+                    Console.ResetColor ();
+                    System.Console.WriteLine ("\nPressione ENTER para voltar ao menu.");
+                    logado = false;
+                    Console.ReadLine ();
+                    continue;
                 }
 
             }
+            }while(logado == false);
         }
 
         public static void Listar () {
@@ -70,6 +87,9 @@ namespace desafioPizzaria {
                     System.Console.WriteLine ("------------------------");
                 }
             }
+            System.Console.WriteLine ("\nPressione ENTER para voltar ao menu.");
+            Console.ReadLine ();
+
         }
     }
 }
