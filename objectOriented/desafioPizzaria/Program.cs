@@ -55,7 +55,7 @@ namespace desafioPizzaria {
                             e = false;
                             break;
                     }
-                } elseif (Usuario.logado == true) { //CASO O USUÁRIO JÁ ESTEJA LOGADO: 
+                } else if (Usuario.logado == true) { //CASO O USUÁRIO JÁ ESTEJA LOGADO: 
                     foreach (string linha in menuLogado) {
                         System.Console.WriteLine (linha);
                     }

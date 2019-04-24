@@ -1,4 +1,6 @@
 ﻿using System;
+using Desafio1.enums;
+
 namespace Desafio1 {
     class Program {
         static void Main (string[] args) {
@@ -191,5 +193,16 @@ namespace Desafio1 {
                 }
             }
         }
+    
+    
+    
+    
+    static void MostrarMensagem(string mensagem, TipoMensagemEnum tipoMensagem){
+        switch(tipoMensagem){
+
+        }
+        
     }
+    }
+
 }

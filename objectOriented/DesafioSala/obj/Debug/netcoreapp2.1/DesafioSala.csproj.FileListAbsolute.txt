@@ -1,0 +1,11 @@
+C:\Users\46885473820\Documents\SenaiLessons\objectOriented\DesafioSala\bin\Debug\netcoreapp2.1\DesafioSala.deps.json
+C:\Users\46885473820\Documents\SenaiLessons\objectOriented\DesafioSala\bin\Debug\netcoreapp2.1\DesafioSala.runtimeconfig.json
+C:\Users\46885473820\Documents\SenaiLessons\objectOriented\DesafioSala\bin\Debug\netcoreapp2.1\DesafioSala.runtimeconfig.dev.json
+C:\Users\46885473820\Documents\SenaiLessons\objectOriented\DesafioSala\bin\Debug\netcoreapp2.1\DesafioSala.dll
+C:\Users\46885473820\Documents\SenaiLessons\objectOriented\DesafioSala\bin\Debug\netcoreapp2.1\DesafioSala.pdb
+C:\Users\46885473820\Documents\SenaiLessons\objectOriented\DesafioSala\obj\Debug\netcoreapp2.1\DesafioSala.csprojAssemblyReference.cache
+C:\Users\46885473820\Documents\SenaiLessons\objectOriented\DesafioSala\obj\Debug\netcoreapp2.1\DesafioSala.csproj.CoreCompileInputs.cache
+C:\Users\46885473820\Documents\SenaiLessons\objectOriented\DesafioSala\obj\Debug\netcoreapp2.1\DesafioSala.AssemblyInfoInputs.cache
+C:\Users\46885473820\Documents\SenaiLessons\objectOriented\DesafioSala\obj\Debug\netcoreapp2.1\DesafioSala.AssemblyInfo.cs
+C:\Users\46885473820\Documents\SenaiLessons\objectOriented\DesafioSala\obj\Debug\netcoreapp2.1\DesafioSala.dll
+C:\Users\46885473820\Documents\SenaiLessons\objectOriented\DesafioSala\obj\Debug\netcoreapp2.1\DesafioSala.pdb
