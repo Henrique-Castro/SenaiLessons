@@ -19,6 +19,8 @@ namespace DesafioSala {
     case 3:
     Sala.AlocarAluno ();
     continue;
+    case 0:
+    break;
     default:
     break;
                 }
@@ -75,7 +77,7 @@ namespace DesafioSala {
             
             return true;
         }
-        static void MostrarMenu () {
+        public static void MostrarMenu () {
             string[] menu = {
                 "=======================================",
                 "||             M E N U               ||",

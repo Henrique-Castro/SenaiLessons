@@ -7,7 +7,7 @@ namespace DesafioSala.classes {
         public int NumeroSala { get; set; }
         public int CapacidadeAtual { get; set; }
         public int CapacidadeTotal { get; set; }
-        public static string[] Alunos { get; set; }
+        public string[] Alunos { get; set; }
 
         public static Sala[] ArraySalas = new Sala[10];
         public Sala (int numeroSala, int capacidadeAtual, int capacidadeTotal) {
@@ -32,10 +32,24 @@ namespace DesafioSala.classes {
 
             System.Console.Write ("Número da sala destino: ");
             int numeroDestino = int.Parse (Console.ReadLine ());
+            if(Program.BuscarSalaPorNumero(numeroDestino, Sala.ArraySalas) == null){
+                Program.MostrarMenu();
+            }
+            if (Program.BuscarSalaPorNumero (numeroDestino, Sala.ArraySalas).CapacidadeAtual <= 0) {
+                Program.MostrarMensagem ("Não há vagas disponíveis nesta sala.", TipoMensagemEnum.ALERTA);
+            } else {
+                Program.BuscarAlunoPorNome (nomeAluno, Aluno.ArrayAlunos).NumeroSala = numeroDestino;
+                Sala salaDestino = Program.BuscarSalaPorNumero(numeroDestino,ArraySalas);
+                foreach (string aluno in salaDestino.Alunos)
+                {
+                    if(aluno.Equals("") || aluno == null){
+                        salaDestino.Alunos[aluno.IndexOf(aluno)] = nomeAluno;
+                        Program.MostrarMensagem("Aluno alocado com sucesso.", TipoMensagemEnum.SUCESSO);
+                        break;
+                    }
+                }
+            }
 
-            Program.BuscarAlunoPorNome(nomeAluno,Aluno.ArrayAlunos).NumeroSala = numeroDestino;
-            
-            Program.BuscarSalaPorNumero(numeroDestino, Sala.ArraySalas).Alunos = nomeAluno;
         }
 
     }
