@@ -1,40 +1,54 @@
+using System;
 namespace Senaizinho_2_Tarde {
     public class Sala {
-        public int numeroSala;
-        public int capacidadeAtual;
-        public int capacidadeTotal;
-        public string[] alunos;
+        public int NumeroSala { get; private set; }
+        public int CapacidadeAtual { get; private set; }
+        public int CapacidadeTotal { get; set; }
+        public Aluno[] ArrayAlunos { get; }
 
-        public string AlocarAluno (string nomeAluno) {
-            if (capacidadeAtual > 0) {
-                capacidadeAtual--;
-                for (int i = 0; i < alunos.Length; i++) {
-                    if (alunos[i] == null || "".Equals(alunos[i])) 
-                    {
-                        alunos[i] = nomeAluno;
-                        return $"Aluno {nomeAluno} alocado com sucesso!";
-                    }    
-                }
-            } else {
-                return $"Capacidade da sala {numeroSala} excedida!";
-            }
-            return "Não foi possível cadastrar";
+        public Sala (int numeroSala, int capacidadeTotal) {
+            NumeroSala = numeroSala;
+            CapacidadeTotal = capacidadeTotal;
+            CapacidadeAtual = CapacidadeAtual;
+            ArrayAlunos = new Aluno[capacidadeTotal];
         }
 
-        public string RemoverAluno (string nomeAluno) {
-            for (int i = 0; i < alunos.Length; i++) {
-                if (alunos[i] != null && nomeAluno.Equals (alunos[i])) {
-                    alunos[i] = "";
-                    capacidadeAtual++;
-                    return $"Aluno {nomeAluno} removido com sucesso!";
+        public bool AlocarAluno (Aluno aluno, out string mensagem) {
+            if (CapacidadeAtual > 0) {
+                CapacidadeAtual--;
+                for (int i = 0; i < ArrayAlunos.Length; i++) {
+                    if (ArrayAlunos[i] == null) {
+                        ArrayAlunos[i] = aluno;
+
+                        mensagem = $"Aluno {aluno.Nome} alocado com sucesso!";
+                        return true;
+                    }
                 }
             }
-            return $"{nomeAluno} não foi encontrado";
+            mensagem = $"Capacidade da sala {NumeroSala} excedida!";
+            return false;
+        }
+
+        public bool RemoverAluno (string nomeAluno, out string mensagem) {
+            if (this.CapacidadeAtual > 0) {
+                for (int i = 0; i < ArrayAlunos.Length; i++) {
+                    if (ArrayAlunos[i] != null && nomeAluno.Equals (ArrayAlunos[i])) {
+                        ArrayAlunos[i] = null;
+                        CapacidadeAtual++;
+                        mensagem = $"Aluno {nomeAluno} removido com sucesso!";
+                        return true;
+                    }
+                }
+            mensagem = "Não há aluno aqui.";
+            return false;
+            }
+            mensagem = $"{nomeAluno} não foi encontrado";
+            return false;
         }
 
         public string ExibirAlunos () {
             string nomesAlunos = "";
-            foreach (var item in alunos) {
+            foreach (var item in ArrayAlunos) {
                 if (item != null) {
                     nomesAlunos += item + " ";
                 }
