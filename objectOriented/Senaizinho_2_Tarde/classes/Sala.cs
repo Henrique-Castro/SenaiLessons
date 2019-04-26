@@ -39,8 +39,8 @@ namespace Senaizinho_2_Tarde {
                         return true;
                     }
                 }
-            mensagem = "Não há aluno aqui.";
-            return false;
+                mensagem = "Não há aluno aqui.";
+                return false;
             }
             mensagem = $"{nomeAluno} não foi encontrado";
             return false;
