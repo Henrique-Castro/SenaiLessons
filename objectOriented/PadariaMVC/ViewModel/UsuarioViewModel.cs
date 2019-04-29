@@ -1,11 +1,15 @@
 using System;
 
-namespace PadariaMVC.ViewModel
-{
-    public class UsuarioViewModel : BaseViewModel
-    {
-        public string Email{get;set;}
-        public string  Senha{get;set;}
-        UsuarioViewModel[] ArrayUsuarios; 
+namespace PadariaMVC.ViewModel {
+    public class UsuarioViewModel : BaseViewModel {
+        public string Senha { get; set; }
+        public string Email { get; set; }
+        
+        public void Usuario (string nome, string email, string senha) {
+            Nome = nome;
+            Email = email;
+            Senha = senha;
+            Id = Id++;
+        }
     }
 }

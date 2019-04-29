@@ -1,14 +1,6 @@
 {
-  "ProjectFilePath": "c:\\Users\\46885473820\\Documents\\SenaiLessons\\objectOriented\\Ex1\\Ex1.csproj",
+  "ProjectFilePath": "c:\\Users\\46885473820\\Documents\\gitHub\\SenaiLessons\\objectOriented\\Ex1\\Ex1.csproj",
   "TargetFramework": "netcoreapp2.1",
   "TagHelpers": [],
-  "Configuration": {
-    "ConfigurationName": "UnsupportedRazor",
-    "LanguageVersion": "1.0",
-    "Extensions": [
-      {
-        "ExtensionName": "UnsupportedRazorExtension"
-      }
-    ]
-  }
+  "Configuration": null
 }
