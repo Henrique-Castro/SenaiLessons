@@ -8,11 +8,11 @@ namespace PadariaMVC.Utils
         SAIR = 0
     }
     public enum MenuLogadoEnum{
-        CADASTRAR_PRODUTO,
+        CADASTRAR_PRODUTO = 1,
         LISTAR,
-        VALOR_TOTAL,
-        ALTERAR_PRODUTO,
-        REMOVER_PRODUTO,
-        SAIR
+        VALOR_TOTAL = 4,
+        ALTERAR_PRODUTO = 5,
+        REMOVER_PRODUTO = 6,
+        VOLTAR = 0
     }
 }

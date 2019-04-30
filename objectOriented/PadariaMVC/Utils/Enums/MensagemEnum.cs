@@ -1,6 +1,6 @@
 namespace PadariaMVC.Utils.Enums
 {
-    public enum MensagemEnums
+    public enum TipoMensagemEnum
     {
         SUCESSO,
         ALERTA,

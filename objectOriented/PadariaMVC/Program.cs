@@ -1,5 +1,6 @@
 ﻿using System;
 using PadariaMVC.Utils;
+using PadariaMVC.Utils.Enums;
 using PadariaMVC.ViewController;
 using PadariaMVC.ViewModel;
 
@@ -28,21 +29,24 @@ namespace PadariaMVC {
                                 switch(opcaoLogado){
                                     case MenuLogadoEnum.CADASTRAR_PRODUTO:
                                     //TODO: CadastrarProduto()
+                                    ProdutoViewController.CadastrarProduto();
                                     break;
                                     case MenuLogadoEnum.ALTERAR_PRODUTO:
                                     //TODO: AlterarProduto()
                                     break;
                                     case MenuLogadoEnum.LISTAR:
                                     //TODO: Listar()
+                                    ProdutoViewController.ListarProdutos();
                                     break;
                                     case MenuLogadoEnum.REMOVER_PRODUTO:
                                     //TODO: RemoverProduto()
+                                    ProdutoViewController.RemoverProduto();
                                     break;
                                     case MenuLogadoEnum.VALOR_TOTAL:
                                     //TODO: ValorTotal()
                                     break;
-                                    case MenuLogadoEnum.SAIR:
-                                    Environment.Exit(0);
+                                    case MenuLogadoEnum.VOLTAR:
+                                    usuarioLogado = null;
                                     break;
                                 }
                             }while(usuarioLogado != null);
@@ -56,6 +60,7 @@ namespace PadariaMVC {
                             Environment.Exit(0);
                             break;
                         default:
+                        Mensagem.MostrarMensagem("Digite uma opção válida.", TipoMensagemEnum.ERRO);
                             break;
                     }
 

@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\46885473820\\Documents\\gitHub\\SenaiLessons\\objectOriented\\PadariaMVC\\PadariaMVC.csproj",
-      "projectName": "PadariaMVC",
-      "projectPath": "c:\\Users\\46885473820\\Documents\\gitHub\\SenaiLessons\\objectOriented\\PadariaMVC\\PadariaMVC.csproj",
+      "projectUniqueName": "C:\\Users\\46885473820\\Documents\\gitHub\\SenaiLessons\\objectOriented\\ToDoList\\ToDoList.csproj",
+      "projectName": "ToDoList",
+      "projectPath": "C:\\Users\\46885473820\\Documents\\gitHub\\SenaiLessons\\objectOriented\\ToDoList\\ToDoList.csproj",
       "packagesPath": "C:\\Users\\46885473820\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\46885473820\\Documents\\gitHub\\SenaiLessons\\objectOriented\\PadariaMVC\\obj\\",
+      "outputPath": "C:\\Users\\46885473820\\Documents\\gitHub\\SenaiLessons\\objectOriented\\ToDoList\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

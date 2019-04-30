@@ -5,7 +5,7 @@ namespace PadariaMVC.ViewModel {
         public string Senha { get; set; }
         public string Email { get; set; }
         
-        public void Usuario (string nome, string email, string senha) {
+        public UsuarioViewModel (string nome, string email, string senha) {
             Nome = nome;
             Email = email;
             Senha = senha;

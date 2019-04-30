@@ -1,4 +1,5 @@
 using System.Reflection.Metadata;
+using PadariaMVC.Utils.Enums;
 using PadariaMVC.ViewController;
 
 namespace PadariaMVC.Utils {
@@ -6,7 +7,7 @@ namespace PadariaMVC.Utils {
         ///<summary>Valida o nome do Usuário, verifica se o mesmo está vazio ou é nulo.</summary>
         ///<param name="nome">Email do usuário</param>
         ///<returns>Retorna true caso o nome seja válido, caso contrário retorna false</returns>
-        public static bool ValidarNomeUsuario (string nome) {
+        public static bool ValidarNome (string nome) {
             if (string.IsNullOrEmpty (nome)) {
                 return false;
             }
@@ -32,10 +33,20 @@ namespace PadariaMVC.Utils {
             else if (senha.Equals (confirmacaoSenha) && senha.Length > 5) {
                 return true;
             }
-            System.Console.WriteLine ("Houve um erro, por favor, digite novamente.");
+            Mensagem.MostrarMensagem("Houve um erro, por favor, tente novamente.", TipoMensagemEnum.ERRO);
             return false;
         }
-
+        public static bool ValidarPreco(string precoString, float preco){
+            if(float.TryParse(precoString, out preco)){
+                return true;
+            }return false;
+        }
+       //Override
+        public static bool ValidarPreco(float preco){
+            if(preco > 0){
+                return true;
+            }return false;
+        }
         
     }
 }
