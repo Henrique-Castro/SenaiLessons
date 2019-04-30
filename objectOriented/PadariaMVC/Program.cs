@@ -6,7 +6,7 @@ using PadariaMVC.ViewModel;
 namespace PadariaMVC {
     class Program {
         static void Main (string[] args) {
-
+            UsuarioViewModel usuarioLogado = null;
             do {
                 MenuUtils.MostrarMenuDeslogado ();
                 MenuDeslogadoEnum opcao = ((MenuDeslogadoEnum) Enum.Parse (typeof (MenuDeslogadoEnum), Console.ReadLine ()));
@@ -16,10 +16,35 @@ namespace PadariaMVC {
                             UsuarioViewController.CadastrarUsuario();
                             break;
                         case MenuDeslogadoEnum.EFETUAR_LOGIN:
+                        
                             //Efetuar Login
-                            UsuarioViewModel usuarioLogado = UsuarioViewController.EfetuarLogin();
+                            
+                            usuarioLogado = UsuarioViewController.EfetuarLogin();
+                            
                             do{
-                                //Colocar o menu logado
+                                //Menu logado
+                                MenuUtils.MostrarMenuLogado(usuarioLogado);
+                                MenuLogadoEnum opcaoLogado = ((MenuLogadoEnum) Enum.Parse (typeof (MenuLogadoEnum), Console.ReadLine ()));
+                                switch(opcaoLogado){
+                                    case MenuLogadoEnum.CADASTRAR_PRODUTO:
+                                    //TODO: CadastrarProduto()
+                                    break;
+                                    case MenuLogadoEnum.ALTERAR_PRODUTO:
+                                    //TODO: AlterarProduto()
+                                    break;
+                                    case MenuLogadoEnum.LISTAR:
+                                    //TODO: Listar()
+                                    break;
+                                    case MenuLogadoEnum.REMOVER_PRODUTO:
+                                    //TODO: RemoverProduto()
+                                    break;
+                                    case MenuLogadoEnum.VALOR_TOTAL:
+                                    //TODO: ValorTotal()
+                                    break;
+                                    case MenuLogadoEnum.SAIR:
+                                    Environment.Exit(0);
+                                    break;
+                                }
                             }while(usuarioLogado != null);
                             break;
                         case MenuDeslogadoEnum.LISTAR_USUARIOS:
@@ -37,6 +62,8 @@ namespace PadariaMVC {
                 }
                 while (true);
             }
-
+            public void Sair(){
+                Environment.Exit(0);
+            }
         }
     }

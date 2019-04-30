@@ -69,7 +69,6 @@ namespace PadariaMVC.ViewController {
 
             UsuarioViewModel usuarioRetornado = usuarioRepository.BuscarUsuario (email, senha);
             if (usuarioRetornado != null) {
-                System.Console.WriteLine ($"Bem-vindo, {usuarioRetornado.Nome}!");
                 return usuarioRetornado;
             } else {
                 System.Console.WriteLine ($"Usuario ou senha inválidos");

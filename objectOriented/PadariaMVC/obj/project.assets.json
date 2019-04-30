@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\46885473820\\Documents\\gitHub\\SenaiLessons\\objectOriented\\PadariaMVC\\PadariaMVC.csproj",
+      "projectUniqueName": "c:\\Users\\46885473820\\Documents\\SenaiLessons\\objectOriented\\PadariaMVC\\PadariaMVC.csproj",
       "projectName": "PadariaMVC",
-      "projectPath": "c:\\Users\\46885473820\\Documents\\gitHub\\SenaiLessons\\objectOriented\\PadariaMVC\\PadariaMVC.csproj",
+      "projectPath": "c:\\Users\\46885473820\\Documents\\SenaiLessons\\objectOriented\\PadariaMVC\\PadariaMVC.csproj",
       "packagesPath": "C:\\Users\\46885473820\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\46885473820\\Documents\\gitHub\\SenaiLessons\\objectOriented\\PadariaMVC\\obj\\",
+      "outputPath": "c:\\Users\\46885473820\\Documents\\SenaiLessons\\objectOriented\\PadariaMVC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
