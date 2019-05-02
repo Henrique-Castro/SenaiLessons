@@ -3,8 +3,8 @@ namespace ToDoList.ModelView
 {
     public class BaseModelView
     {
-        int Id;
-        string Nome;
-        DateTime DataCriacao;
+        public int Id;
+        public string Nome;
+        public DateTime DataCriacao;
     }
 }

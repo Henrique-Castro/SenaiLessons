@@ -33,6 +33,7 @@ namespace PadariaMVC {
                                     break;
                                     case MenuLogadoEnum.ALTERAR_PRODUTO:
                                     //TODO: AlterarProduto()
+                                    ProdutoViewController.AlterarProduto();
                                     break;
                                     case MenuLogadoEnum.LISTAR:
                                     //TODO: Listar()
@@ -44,6 +45,7 @@ namespace PadariaMVC {
                                     break;
                                     case MenuLogadoEnum.VALOR_TOTAL:
                                     //TODO: ValorTotal()
+                                    ProdutoViewController.MostrarValorTotal();
                                     break;
                                     case MenuLogadoEnum.VOLTAR:
                                     usuarioLogado = null;
@@ -66,9 +68,6 @@ namespace PadariaMVC {
 
                 }
                 while (true);
-            }
-            public void Sair(){
-                Environment.Exit(0);
             }
         }
     }

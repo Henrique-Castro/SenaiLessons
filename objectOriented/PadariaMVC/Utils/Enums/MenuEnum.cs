@@ -15,4 +15,11 @@ namespace PadariaMVC.Utils
         REMOVER_PRODUTO = 6,
         VOLTAR = 0
     }
+    public enum MenuAlterarProduto{
+        NOME = 1,
+        CATEGORIA,
+        DESCRICAO,
+        PRECO,
+        SAIR = 0
+    }
 }

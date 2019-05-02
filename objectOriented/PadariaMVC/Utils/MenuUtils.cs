@@ -42,5 +42,21 @@ namespace PadariaMVC.Utils {
             }
             System.Console.Write ("Escolha uma opção:");
         }
+        public static void MostrarMenuAlterarProduto(){
+            string[] menu = {
+                "                                         ",
+                "               1- Nome                   ",
+                "               2- Categoria              ",
+                "               3- Descrição              ",
+                "               4- Preço                  ",
+                "               0- Voltar                 ",
+                "_________________________________________",
+                "Qual informação você deseja alterar?"
+            };
+            foreach (string linha in menu)
+            { 
+              System.Console.WriteLine(linha);  
+            }
+        }
     }
 }

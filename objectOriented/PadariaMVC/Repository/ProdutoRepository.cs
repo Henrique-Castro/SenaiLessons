@@ -49,8 +49,17 @@ namespace PadariaMVC.Repository {
             listaDeProdutos.Remove (BuscarProdutoPorNome (produtoRecebido.Nome));
             Mensagem.MostrarMensagem ("Produto removido com sucesso!", TipoMensagemEnum.SUCESSO);
         }
-        public static void Alterar(ProdutoViewModel produtoASerAlterado){
+        public static void Alterar(ProdutoViewModel produtoASerAlterado, ProdutoViewModel produtoJaAlterado){
             //Arranja um jeito de passar os valores recebidos para o produto que já existe (Será que dá pra usar um construtor??)
+            foreach (var item in listaDeProdutos){
+                if(item.Nome == produtoASerAlterado.Nome){
+                    item.Nome = produtoJaAlterado.Nome;
+                    item.Preco = produtoJaAlterado.Preco;
+                    item.Categoria = produtoJaAlterado.Categoria;
+                    item.Descricao = produtoJaAlterado.Descricao;
+
+                }
+            }
         }
     }
 }
