@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using ToDoList.ModelView;
 using ToDoList.Repository;
@@ -43,7 +44,7 @@ namespace ToDoList.ControllerView {
             } while (!ValidacaoUtil.ValidarSenha (senha, confirm));
             //RECEBE O TIPO DE USUÁRIO
             do {
-                MenuUtils.MostrarMenuTipoUsuario ();
+                MenuUtil.MostrarMenuTipoUsuario ();
                 MenuTipoUsuário opcaoTipoUsuario = (MenuTipoUsuário) Enum.Parse (typeof (MenuTipoUsuário), Console.ReadLine ());                
                 if (ValidacaoUtil.ValidarTipoUsuario (opcaoTipoUsuario) == null) {
                     Mensagem.MostrarMensagem ("Por favor, digite um número adequado.", TipoMensagemEnum.ALERTA);
@@ -80,6 +81,15 @@ namespace ToDoList.ControllerView {
                     return true;
                 }
             }while(!ValidacaoUtil.ValidarLogin(email, senha));
+        }
+        public static void ListarUsuarios(){
+            List<UsuarioModelView> listaDeUsuarios = new List<UsuarioModelView>();
+            foreach (var item in listaDeUsuarios)
+            {
+                if(item != null){
+                    System.Console.WriteLine($"{item.Id}\n{item.Nome}\n{item.Email}\n{item.Tipo}\n{item.Senha}");
+                }
+            }
         }
 
     }

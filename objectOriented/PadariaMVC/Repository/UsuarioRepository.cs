@@ -1,3 +1,4 @@
+using System.IO;
 using System;
 using System.Collections.Generic;
 using PadariaMVC.ViewModel;
@@ -12,7 +13,9 @@ namespace PadariaMVC.Repository {
             objetoUsuario.Id = listaDeUsuarios.Count + 1;
             objetoUsuario.DataCriacao = DateTime.Now;
 
-            listaDeUsuarios.Add (objetoUsuario);
+            StreamWriter sw = new StreamWriter("usuarios.csv", true);
+            sw.WriteLine($"{objetoUsuario.Id};{objetoUsuario.Nome};{objetoUsuario.Email};{objetoUsuario.Senha}; {objetoUsuario.DataCriacao}");
+            sw.Close();
 
             return objetoUsuario;
         }

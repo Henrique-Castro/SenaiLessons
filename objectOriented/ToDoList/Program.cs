@@ -9,8 +9,8 @@ namespace ToDoList
     {
         static void Main(string[] args)
         {
-            
-            MenuUtils.MostrarMenuInicial();
+            do{
+            MenuUtil.MostrarMenuInicial();
             MenuInicialEnum opcaoInicial = (MenuInicialEnum)Enum.Parse(typeof(MenuInicialEnum), Console.ReadLine());
             switch (opcaoInicial)
             {
@@ -30,6 +30,7 @@ namespace ToDoList
                 default:
                 break;
             }
+            }while(true);
         }
     }
 }

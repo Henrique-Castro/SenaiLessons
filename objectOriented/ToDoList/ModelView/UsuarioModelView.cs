@@ -13,8 +13,7 @@ namespace ToDoList.ModelView
             Nome = nome;
             Email = email;
             Senha = senha;
-            Tipo = tipo;
-            DataCriacao = DateTime.Now;
+            Tipo = tipo;         
             Id = Id++;
         }
         

@@ -1,7 +1,7 @@
 using System;
 
 namespace ToDoList.Utils {
-    public class MenuUtils {
+    public class MenuUtil {
         public static void MostrarMenuInicial () {
             int item = 1;
             string[] menu = {
