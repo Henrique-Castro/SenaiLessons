@@ -15,6 +15,7 @@ namespace ToDoList.ModelView
             Senha = senha;
             Tipo = tipo;
             DataCriacao = DateTime.Now;
+            Id = Id++;
         }
         
     }

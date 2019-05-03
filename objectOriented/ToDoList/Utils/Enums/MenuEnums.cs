@@ -6,6 +6,7 @@ namespace ToDoList.Utils.Enums {
     }
     public enum MenuTipoUsuário{
         USUARIO = 1,
-        ADMINISTRADOR
+        ADMINISTRADOR,
+        SAIR = 0
     }
 }

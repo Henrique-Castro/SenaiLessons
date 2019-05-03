@@ -24,8 +24,8 @@ namespace ToDoList.Utils {
             int item = 1;
             string[] menu = {
                 "_________________________",
-                "|   Tipo de usuário:    |",
-                $"|    {item}- Usuário    |",
+                "|   Tipo de usuário:     |",
+                $"|    {item}- Usuário          |",
                 $"|    {++item}- Administrador    |",
                 "|________________________|",
                 "|    0- Voltar           |",

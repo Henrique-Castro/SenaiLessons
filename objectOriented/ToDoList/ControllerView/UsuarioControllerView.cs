@@ -2,56 +2,59 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using ToDoList.ModelView;
 using ToDoList.Repository;
+using ToDoList.Util;
 using ToDoList.Utils;
 using ToDoList.Utils.Enums;
 
 namespace ToDoList.ControllerView {
     public class UsuarioControllerView : UsuarioModelView {
         public static UsuarioModelView usuarioModelView;
-        public static UsuarioRepository repository;
+        public static UsuarioRepository repository = new UsuarioRepository();
 
         ///<summary>Pede todas as informações para o usuário, recolhe e as insere no armazenamento. </summary>
         public static void CadastrarUsuario () {
-            string nome, email, senha, tipo;
+            string nome, email, senha, tipo = null, confirm;
             //RECEBE E TESTA NOME DE USUÁRIO
             do {
                 System.Console.Write ("Nome de usuário: ");
                 nome = Console.ReadLine ();
-                if (!ValidacoesUtils.ValidarStringVazia (nome)) {
+                if (!ValidacaoUtil.ValidarStringVazia (nome)) {
                     Mensagem.MostrarMensagem ("O nome não pode ficar vazio.", TipoMensagemEnum.ALERTA);
                 }
-            } while (!ValidacoesUtils.ValidarStringVazia (nome));
+            } while (!ValidacaoUtil.ValidarStringVazia (nome));
             //RECEBE E TESTA EMAIL
             do {
                 System.Console.Write ("Email: ");
                 email = Console.ReadLine ();
-                if (!ValidacoesUtils.ValidarEmail (email)) {
+                if (!ValidacaoUtil.ValidarEmail (email)) {
                     Mensagem.MostrarMensagem ("O email não possui um formato válido.", TipoMensagemEnum.ALERTA);
                 }
-            } while (!ValidacoesUtils.ValidarEmail (email));
+            } while (!ValidacaoUtil.ValidarEmail (email));
             //RECEBE E TESTA SENHA
             do {
-                System.Console.WriteLine ("Senha: ");
+                System.Console.Write ("Senha: ");
                 senha = Console.ReadLine ();
-                if (!ValidacoesUtils.ValidarSenha (senha)) {
+                System.Console.Write("Confirme a senha: ");
+                confirm = Console.ReadLine();
+                
+                if (!ValidacaoUtil.ValidarSenha (senha, confirm)) {
                     Mensagem.MostrarMensagem ("A senha não pode ter menos de 8 caracteres nem mais do que 32.", TipoMensagemEnum.ALERTA);
                 }
-            } while (!ValidacoesUtils.ValidarSenha (senha));
+            } while (!ValidacaoUtil.ValidarSenha (senha, confirm));
             //RECEBE O TIPO DE USUÁRIO
             do {
                 MenuUtils.MostrarMenuTipoUsuario ();
                 MenuTipoUsuário opcaoTipoUsuario = (MenuTipoUsuário) Enum.Parse (typeof (MenuTipoUsuário), Console.ReadLine ());                
-                if (ValidacoesUtils.ValidarTipoUsuario (opcaoTipoUsuario) == null) {
+                if (ValidacaoUtil.ValidarTipoUsuario (opcaoTipoUsuario) == null) {
                     Mensagem.MostrarMensagem ("Por favor, digite um número adequado.", TipoMensagemEnum.ALERTA);
-                    tipo = null;
                     continue;
                 } else {
-                    tipo = ValidacoesUtils.ValidarTipoUsuario (opcaoTipoUsuario);
+                    tipo = ValidacaoUtil.ValidarTipoUsuario (opcaoTipoUsuario);
                 }
             } while (tipo == null);
-
-            usuarioModelView = new UsuarioModelView (nome, email, senha, tipo);
-            repository.InserirUsuario (usuarioModelView);
+            
+            usuarioModelView = new UsuarioModelView(nome, email, senha, tipo);
+            repository.InserirUsuario(usuarioModelView);
             Mensagem.MostrarMensagem ("Usuário cadastrado com sucesso!", TipoMensagemEnum.SUCESSO);
         }
 
@@ -61,24 +64,22 @@ namespace ToDoList.ControllerView {
                 do {
                     System.Console.Write ("Email:");
                     email = Console.ReadLine ();
-                    if(!ValidacoesUtils.ValidarEmail(email)){
+                    if(!ValidacaoUtil.ValidarEmail(email)){
                         Mensagem.MostrarMensagem("Email não possui caracteres necessários ( @ ou . )", TipoMensagemEnum.ALERTA);
                     }
-                } while (!ValidacoesUtils.ValidarEmail(email));
+                } while (!ValidacaoUtil.ValidarEmail(email));
                 do{
                     System.Console.Write("Senha: ");
                     senha = Console.ReadLine();
-                    if(!ValidacoesUtils.ValidarSenha(senha)){
-                        Mensagem.MostrarMensagem("Senha com tamanho inválido.", TipoMensagemEnum.ALERTA);
-                    }
-                }while(!ValidacoesUtils.ValidarSenha(senha));
-                if(!ValidacoesUtils.ValidarLogin(email, senha)){
+                    
+                }while(senha != null && senha != " ");
+                if(!ValidacaoUtil.ValidarLogin(email, senha)){
                     Mensagem.MostrarMensagem("Email ou senha inválidos.", TipoMensagemEnum.ERRO);
                     return false;
                 }else{
                     return true;
                 }
-            }while(!ValidacoesUtils.ValidarLogin(email, senha));
+            }while(!ValidacaoUtil.ValidarLogin(email, senha));
         }
 
     }

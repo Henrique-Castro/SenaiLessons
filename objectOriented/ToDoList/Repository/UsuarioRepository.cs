@@ -11,7 +11,13 @@ namespace ToDoList.Repository
         ///<param name="usuarioModelView">Objeto usuário</param>
         ///<returns>Retorna um objeto do tipo UsuarioModelView.</returns>
         public UsuarioModelView InserirUsuario(UsuarioModelView usuarioModelView){
-            usuarioModelView.Id = listaDeUsuarios.Count + 1;
+            foreach (var item in listaDeUsuarios) {
+                if (item.Nome == null) {
+                    usuarioModelView.Id = item.Id;
+                } else {
+                    usuarioModelView.Id = listaDeUsuarios.Count + 1;
+                }
+            }
 
             listaDeUsuarios.Add(usuarioModelView);
 

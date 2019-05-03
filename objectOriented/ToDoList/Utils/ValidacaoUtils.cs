@@ -3,8 +3,8 @@ using ToDoList.ModelView;
 using ToDoList.Repository;
 using ToDoList.Utils.Enums;
 
-namespace ToDoList.Utils {
-    public class ValidacoesUtils {
+namespace ToDoList.Util {
+    public class ValidacaoUtil {
         ///<summary>Valida se a string passada no argumento está vazia ou não.</summary>
         ///<param name="palavra">String a ser examinada</param>
         ///<returns>Retorna 'true' caso a string não esteja vazia e 'false' caso seja uma string vazia</returns>
@@ -30,8 +30,8 @@ namespace ToDoList.Utils {
         ///<summary>Valida se a senha passada no argumento possui 8 caracteres ou mais e menos de 32.</summary>
         ///<param name="senha">Senha do usuário</param>
         ///<returns>Retorna 'true' caso a senha possua 8 caracteres ou mais e menos de 32, e retorna 'false' no caso contrário.</returns>
-        public static bool ValidarSenha (string senha) {
-            if (senha.Length >= 8 && senha.Length <= 32) {
+        public static bool ValidarSenha (string senha, string confirm) {
+            if (senha.Length >= 8 && senha.Length <= 32 && senha.Equals(confirm)) {
                 return true;
             } else {
                 return false;
