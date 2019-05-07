@@ -53,7 +53,7 @@ namespace PadariaMVC.ViewController {
         }
         ///<summary>Lista todos os usuários previamente cadastrados, exibindo seus atributos: Id, Nome, Email, Senha e Data de Criação</summary>
         public static void ListarUsuarios () {
-            List<UsuarioViewModel> listaDeUsuarios = usuarioRepository.ListarUsuarios ();
+            List<UsuarioViewModel> listaDeUsuarios = usuarioRepository.Listar();
 
             foreach (var item in listaDeUsuarios) {
                 System.Console.WriteLine ($"---------------------------\nId: {item.Id}\nNome: {item.Nome}\nEmail: {item.Email} \nSenha: {item.Senha}\nData de criação: {item.DataCriacao}\n---------------------------");
@@ -77,8 +77,8 @@ namespace PadariaMVC.ViewController {
             if (usuarioRetornado != null) {
                 return usuarioRetornado;
             } else {
-                Mensagem.MostrarMensagem($"Usuario ou senha inválidos", TipoMensagemEnum.ALERTA);
-                return usuarioRetornado;
+                Mensagem.MostrarMensagem($"Usuario ou senha inválidos", TipoMensagemEnum.ERRO);
+                return usuarioRetornado; //null
             }
 
         }

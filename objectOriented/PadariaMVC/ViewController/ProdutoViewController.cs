@@ -11,7 +11,7 @@ namespace PadariaMVC.ViewController {
         static ProdutoViewModel produtoViewModel;
         //Instanciar o repositório
         static ProdutoRepository produtoRepository = new ProdutoRepository ();
-        static public void CadastrarProduto () {
+        static public void CadastrarProduto (int idResponsavel) {
             string nome, categoria, descricao;
             float preco = 0;
             //Nome do produto
@@ -49,9 +49,11 @@ namespace PadariaMVC.ViewController {
                 preco = float.Parse (precoCapturado);
 
             } while (!ValidacaoUtil.ValidarPreco (preco));
-            produtoViewModel = new ProdutoViewModel (nome, categoria, descricao, preco);
+            produtoViewModel = new ProdutoViewModel (idResponsavel, nome, categoria, descricao, preco);
 
-            produtoRepository.InserirProduto (produtoViewModel);
+            produtoRepository.InserirProduto (idResponsavel,produtoViewModel);
+
+            Mensagem.MostrarMensagem("Produto cadastrado com sucesso.", TipoMensagemEnum.SUCESSO);
 
         }
         ///<summary>Lista todos os produtos previamente cadastrados, exibindo seus atributos: Id, Nome, Categoria, Descrição e Data de Criação</summary>

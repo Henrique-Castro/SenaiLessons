@@ -1,3 +1,4 @@
+using System.IO;
 using System;
 using System.Collections.Generic;
 using PadariaMVC.Utils;
@@ -10,7 +11,7 @@ namespace PadariaMVC.Repository {
         ///<summary>Método de inserção do produto na lista do repositório</summary>
         ///<param name="objetoProduto">Objeto do tipo ProdutoViewModel</param>
         ///<returns>Retorna um objeto do tipo ProdutoViewModel.false Sugere-se que o método seja usado junto com um construtor.</returns>
-        public ProdutoViewModel InserirProduto (ProdutoViewModel objetoProduto) {
+        public ProdutoViewModel InserirProduto (int IdResponsavel,ProdutoViewModel objetoProduto) {
             // Console.Write (BuscarProdutoPorNome (null).Id);
             foreach (var item in listaDeProdutos) {
                 if (item.Nome == null) {
@@ -22,12 +23,36 @@ namespace PadariaMVC.Repository {
             objetoProduto.DataCriacao = DateTime.Now;
 
             listaDeProdutos.Add (objetoProduto);
-
+            StreamWriter sw = new StreamWriter("produtos.csv", true);
+            sw.WriteLine($"{objetoProduto.IdResponsavel};{objetoProduto.Id};{objetoProduto.Nome};{objetoProduto.Descricao};{objetoProduto.Categoria};{objetoProduto.Preco};{objetoProduto.DataCriacao}");
+            sw.Close();
             return objetoProduto;
         }
         ///<summary>Método de acesso à lista de produtos cadastrados.</summary>
         ///<returns>Retorna uma lista de produtos cadastrados previamente.</returns>
         public List<ProdutoViewModel> ListarProdutos () {
+            listaDeProdutos = new List<ProdutoViewModel>();
+            int contador = 0;
+            ProdutoViewModel produto;
+            if(!File.Exists("produtos.csv")){
+                return null;
+            }
+            string[] arquivoUsuarios = File.ReadAllLines("produtos.csv");
+            
+            foreach (var item in arquivoUsuarios)
+            {
+                string[] dadosDoProduto = item.Split(';');
+                produto = new ProdutoViewModel();
+                produto.IdResponsavel = int.Parse(dadosDoProduto[0]);
+                produto.Id = int.Parse(dadosDoProduto[1]);
+                produto.Nome = dadosDoProduto[2];
+                produto.Descricao = dadosDoProduto[3];
+                produto.Categoria = dadosDoProduto[4];
+                produto.Preco = float.Parse(dadosDoProduto[5]);
+                produto.DataCriacao = DateTime.Parse(dadosDoProduto[6]);
+
+                listaDeProdutos.Add(produto);
+            }
             return listaDeProdutos;
         }
         ///<summary>Compara a informação inserida pelo usuário com todos os dados cadastrados previamente.</summary>

@@ -11,5 +11,8 @@ namespace PadariaMVC.ViewModel {
             Senha = senha;
             Id = Id++;
         }
+        public UsuarioViewModel(){
+            
+        }
     }
 }

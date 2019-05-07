@@ -29,7 +29,7 @@ namespace PadariaMVC {
                                 switch(opcaoLogado){
                                     case MenuLogadoEnum.CADASTRAR_PRODUTO:
                                     //TODO: CadastrarProduto()
-                                    ProdutoViewController.CadastrarProduto();
+                                    ProdutoViewController.CadastrarProduto(usuarioLogado.Id);
                                     break;
                                     case MenuLogadoEnum.ALTERAR_PRODUTO:
                                     //TODO: AlterarProduto()

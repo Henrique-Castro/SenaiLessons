@@ -73,7 +73,7 @@ namespace ToDoList.ControllerView {
                     System.Console.Write("Senha: ");
                     senha = Console.ReadLine();
                     
-                }while(senha != null && senha != " ");
+                }while(senha == null || senha == " ");
                 if(!ValidacaoUtil.ValidarLogin(email, senha)){
                     Mensagem.MostrarMensagem("Email ou senha inválidos.", TipoMensagemEnum.ERRO);
                     return false;

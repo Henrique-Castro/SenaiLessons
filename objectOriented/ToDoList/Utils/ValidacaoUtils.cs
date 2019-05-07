@@ -60,7 +60,7 @@ namespace ToDoList.Util {
             if(usuario == null){
                 return false;
             }
-            if(usuario.Senha == senha){
+            if(usuario.Senha == senha && usuario.Email == email){
                 return true;
             }
             else{
