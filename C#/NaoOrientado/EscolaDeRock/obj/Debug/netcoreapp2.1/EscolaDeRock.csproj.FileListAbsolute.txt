@@ -1,0 +1,11 @@
+C:\Users\46885473820\Documents\gitHub\SenaiLessons\EscolaDeRock\bin\Debug\netcoreapp2.1\EscolaDeRock.deps.json
+C:\Users\46885473820\Documents\gitHub\SenaiLessons\EscolaDeRock\bin\Debug\netcoreapp2.1\EscolaDeRock.runtimeconfig.json
+C:\Users\46885473820\Documents\gitHub\SenaiLessons\EscolaDeRock\bin\Debug\netcoreapp2.1\EscolaDeRock.runtimeconfig.dev.json
+C:\Users\46885473820\Documents\gitHub\SenaiLessons\EscolaDeRock\bin\Debug\netcoreapp2.1\EscolaDeRock.dll
+C:\Users\46885473820\Documents\gitHub\SenaiLessons\EscolaDeRock\bin\Debug\netcoreapp2.1\EscolaDeRock.pdb
+C:\Users\46885473820\Documents\gitHub\SenaiLessons\EscolaDeRock\obj\Debug\netcoreapp2.1\EscolaDeRock.csprojAssemblyReference.cache
+C:\Users\46885473820\Documents\gitHub\SenaiLessons\EscolaDeRock\obj\Debug\netcoreapp2.1\EscolaDeRock.csproj.CoreCompileInputs.cache
+C:\Users\46885473820\Documents\gitHub\SenaiLessons\EscolaDeRock\obj\Debug\netcoreapp2.1\EscolaDeRock.AssemblyInfoInputs.cache
+C:\Users\46885473820\Documents\gitHub\SenaiLessons\EscolaDeRock\obj\Debug\netcoreapp2.1\EscolaDeRock.AssemblyInfo.cs
+C:\Users\46885473820\Documents\gitHub\SenaiLessons\EscolaDeRock\obj\Debug\netcoreapp2.1\EscolaDeRock.dll
+C:\Users\46885473820\Documents\gitHub\SenaiLessons\EscolaDeRock\obj\Debug\netcoreapp2.1\EscolaDeRock.pdb
