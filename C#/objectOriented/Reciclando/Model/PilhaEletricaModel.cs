@@ -6,10 +6,9 @@ namespace Reciclando.Model
 {
     public class PilhaEletricaModel : LixoModel, INaoDefinido
     {
-        public bool IrParaLixeiraCinza(LixosEnum lixo)
+        public bool IrParaLixeiraCinza()
         {
-            var nome = LixosEnum.GetName(typeof(LixosEnum), lixo);
-            BackgroundColor.MudarCorDeFundo($"O {nome} foi jogado na composteira.",CoresEnum.CINZA);
+            BackgroundColor.MudarCorDeFundo("O lixo foi jogado na lixeira cinza (Indefinido).",CoresEnum.CINZA);
             return true;
         }
     }

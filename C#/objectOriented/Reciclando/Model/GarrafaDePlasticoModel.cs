@@ -6,10 +6,9 @@ namespace Reciclando.Model
 {
     public class GarrafaDePlasticoModel : LixoModel, IPlastico
     {
-        public bool IrParaLixeiraVermelha(LixosEnum lixo)
+        public bool IrParaLixeiraVermelha()
         {
-            var nome = LixosEnum.GetName(typeof(LixosEnum), lixo);
-            BackgroundColor.MudarCorDeFundo($"O {nome} foi jogado na composteira.",CoresEnum.VERMELHO);
+            BackgroundColor.MudarCorDeFundo("O lixo foi jogado na lixeira vermelha.",CoresEnum.VERMELHO);
             return true;
         }
     }

@@ -4,6 +4,6 @@ namespace Reciclando.Interfaces
 {
     public interface IPlastico
     {
-         bool IrParaLixeiraVermelha(LixosEnum lixo);
+         bool IrParaLixeiraVermelha();
     }
 }

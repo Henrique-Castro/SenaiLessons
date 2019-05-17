@@ -4,6 +4,6 @@ namespace Reciclando.Interfaces
 {
     public interface IOrganico
     {
-         bool IrParaAComposteira(LixosEnum lixo);
+         bool IrParaAComposteira();
     }
 }

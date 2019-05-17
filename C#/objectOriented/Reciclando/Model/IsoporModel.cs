@@ -6,17 +6,15 @@ namespace Reciclando.Model
 {
     public class IsoporModel : LixoModel, IPlastico, INaoDefinido
     {
-        public bool IrParaLixeiraCinza(LixosEnum lixo)
+        public bool IrParaLixeiraCinza()
         {
-            var nome = LixosEnum.GetName(typeof(LixosEnum), lixo);
-            BackgroundColor.MudarCorDeFundo($"O {nome} foi jogado na composteira.",CoresEnum.CINZA);
+            BackgroundColor.MudarCorDeFundo($"O foi jogado na lixeira cinza.",CoresEnum.CINZA);
             return true;
         }
 
-        public bool IrParaLixeiraVermelha(LixosEnum lixo)
+        public bool IrParaLixeiraVermelha()
         {
-            var nome = LixosEnum.GetName(typeof(LixosEnum), lixo);
-            BackgroundColor.MudarCorDeFundo($"O {nome} foi jogado na composteira.",CoresEnum.VERMELHO);
+            BackgroundColor.MudarCorDeFundo("O lixo foi jogado na lixeira vermelha.",CoresEnum.VERMELHO);
             return true;
         }
     }

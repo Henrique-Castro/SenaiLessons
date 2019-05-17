@@ -4,6 +4,6 @@ namespace Reciclando.Interfaces
 {
     public interface INaoDefinido
     {
-         bool IrParaLixeiraCinza(LixosEnum lixo);
+         bool IrParaLixeiraCinza();
     }
 }

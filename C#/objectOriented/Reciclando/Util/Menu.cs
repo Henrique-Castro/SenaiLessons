@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using Reciclando.Controller;
 using Reciclando.Model;
+using Reciclando.Repository;
 using Reciclando.Util.Enums;
 
 namespace Reciclando.Util {
@@ -40,12 +42,13 @@ namespace Reciclando.Util {
                         break;
                     case ConsoleKey.Enter:
                         opcaoLixoSelecionado = (LixosEnum) Enum.Parse (typeof (LixosEnum), lixoDestacado.ToString ());
+                        int codigo = lixoDestacado;
                         break;
                 }
 
                 switch (opcaoLixoSelecionado) {
                     case LixosEnum.FRUTA:
-                                     
+                                    
                         break;
                     case LixosEnum.GARRAFA_DE_PLASTICO:
 

@@ -6,10 +6,9 @@ namespace Reciclando.Model
 {
     public class FrutaModel :  LixoModel, IOrganico
     {
-        public bool IrParaAComposteira(LixosEnum lixo)
+        public bool IrParaAComposteira()
         {
-            var nome = LixosEnum.GetName(typeof(LixosEnum), lixo);
-            BackgroundColor.MudarCorDeFundo($"O {nome} foi jogado na composteira.",CoresEnum.PRETO);
+            BackgroundColor.MudarCorDeFundo("O lixo foi jogado na composteira.",CoresEnum.PRETO);
             return true;
         }
     }
