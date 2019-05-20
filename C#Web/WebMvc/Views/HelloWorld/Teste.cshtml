@@ -1,10 +1,12 @@
-<!DOCTYPE html>
+@{
+    ViewData["Title"] = "Suba a sua imagem";
+}
 <html>
 
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Page Title</title>   
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
@@ -12,10 +14,10 @@
 </head>
 
 <body>
-
+    <h1>@ViewData["Title"]</h1>
     <input onchange="ShowImage(this)" id="button" type="file" value="Procurar imagem" accept="image/png/jpeg" />
     <img onclick='UploadImage(this)' src="#" id="vish" />
-
+<!-- -->
 
     <script>
         var reader = new FileReader();

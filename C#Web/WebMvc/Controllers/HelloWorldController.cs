@@ -8,5 +8,8 @@ namespace WebMvc.Controllers
 
             return View();
         }
+        public string Welcome(string nome, int idade = 1){
+            return $"Seja bem-vindo(a), {nome}!\n Sua idade é {idade}.";
+        }
     }
 }
