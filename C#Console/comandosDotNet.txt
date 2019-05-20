@@ -1,0 +1,3 @@
+comandos dotnet para console 
+
+dotnet new console - cria a estrutura de aplicativo para o console do visual studio code

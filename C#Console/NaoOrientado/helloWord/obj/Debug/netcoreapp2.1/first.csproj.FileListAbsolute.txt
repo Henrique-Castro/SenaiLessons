@@ -1,0 +1,11 @@
+C:\Users\46885473820\Documents\Senai\TecDes-Senai\C#\first\bin\Debug\netcoreapp2.1\first.deps.json
+C:\Users\46885473820\Documents\Senai\TecDes-Senai\C#\first\bin\Debug\netcoreapp2.1\first.runtimeconfig.json
+C:\Users\46885473820\Documents\Senai\TecDes-Senai\C#\first\bin\Debug\netcoreapp2.1\first.runtimeconfig.dev.json
+C:\Users\46885473820\Documents\Senai\TecDes-Senai\C#\first\bin\Debug\netcoreapp2.1\first.dll
+C:\Users\46885473820\Documents\Senai\TecDes-Senai\C#\first\bin\Debug\netcoreapp2.1\first.pdb
+C:\Users\46885473820\Documents\Senai\TecDes-Senai\C#\first\obj\Debug\netcoreapp2.1\first.csprojAssemblyReference.cache
+C:\Users\46885473820\Documents\Senai\TecDes-Senai\C#\first\obj\Debug\netcoreapp2.1\first.csproj.CoreCompileInputs.cache
+C:\Users\46885473820\Documents\Senai\TecDes-Senai\C#\first\obj\Debug\netcoreapp2.1\first.AssemblyInfoInputs.cache
+C:\Users\46885473820\Documents\Senai\TecDes-Senai\C#\first\obj\Debug\netcoreapp2.1\first.AssemblyInfo.cs
+C:\Users\46885473820\Documents\Senai\TecDes-Senai\C#\first\obj\Debug\netcoreapp2.1\first.dll
+C:\Users\46885473820\Documents\Senai\TecDes-Senai\C#\first\obj\Debug\netcoreapp2.1\first.pdb

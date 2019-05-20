@@ -1,0 +1,11 @@
+C:\Users\46885473820\Documents\aulas\C#\array1\obj\Debug\netcoreapp2.1\array1.csprojAssemblyReference.cache
+C:\Users\46885473820\Documents\aulas\C#\array1\obj\Debug\netcoreapp2.1\array1.csproj.CoreCompileInputs.cache
+C:\Users\46885473820\Documents\aulas\C#\array1\obj\Debug\netcoreapp2.1\array1.AssemblyInfoInputs.cache
+C:\Users\46885473820\Documents\aulas\C#\array1\obj\Debug\netcoreapp2.1\array1.AssemblyInfo.cs
+C:\Users\46885473820\Documents\aulas\C#\array1\bin\Debug\netcoreapp2.1\array1.deps.json
+C:\Users\46885473820\Documents\aulas\C#\array1\bin\Debug\netcoreapp2.1\array1.runtimeconfig.json
+C:\Users\46885473820\Documents\aulas\C#\array1\bin\Debug\netcoreapp2.1\array1.runtimeconfig.dev.json
+C:\Users\46885473820\Documents\aulas\C#\array1\bin\Debug\netcoreapp2.1\array1.dll
+C:\Users\46885473820\Documents\aulas\C#\array1\bin\Debug\netcoreapp2.1\array1.pdb
+C:\Users\46885473820\Documents\aulas\C#\array1\obj\Debug\netcoreapp2.1\array1.dll
+C:\Users\46885473820\Documents\aulas\C#\array1\obj\Debug\netcoreapp2.1\array1.pdb

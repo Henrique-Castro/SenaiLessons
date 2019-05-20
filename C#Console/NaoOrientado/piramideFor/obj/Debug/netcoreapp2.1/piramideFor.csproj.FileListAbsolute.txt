@@ -1,0 +1,11 @@
+C:\Users\46885473820\Documents\aulas\C#\piramideFor\obj\Debug\netcoreapp2.1\piramideFor.csprojAssemblyReference.cache
+C:\Users\46885473820\Documents\aulas\C#\piramideFor\obj\Debug\netcoreapp2.1\piramideFor.csproj.CoreCompileInputs.cache
+C:\Users\46885473820\Documents\aulas\C#\piramideFor\obj\Debug\netcoreapp2.1\piramideFor.AssemblyInfoInputs.cache
+C:\Users\46885473820\Documents\aulas\C#\piramideFor\obj\Debug\netcoreapp2.1\piramideFor.AssemblyInfo.cs
+C:\Users\46885473820\Documents\aulas\C#\piramideFor\bin\Debug\netcoreapp2.1\piramideFor.deps.json
+C:\Users\46885473820\Documents\aulas\C#\piramideFor\bin\Debug\netcoreapp2.1\piramideFor.runtimeconfig.json
+C:\Users\46885473820\Documents\aulas\C#\piramideFor\bin\Debug\netcoreapp2.1\piramideFor.runtimeconfig.dev.json
+C:\Users\46885473820\Documents\aulas\C#\piramideFor\bin\Debug\netcoreapp2.1\piramideFor.dll
+C:\Users\46885473820\Documents\aulas\C#\piramideFor\bin\Debug\netcoreapp2.1\piramideFor.pdb
+C:\Users\46885473820\Documents\aulas\C#\piramideFor\obj\Debug\netcoreapp2.1\piramideFor.dll
+C:\Users\46885473820\Documents\aulas\C#\piramideFor\obj\Debug\netcoreapp2.1\piramideFor.pdb

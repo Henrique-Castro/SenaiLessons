@@ -1,0 +1,11 @@
+C:\Users\46885473820\Documents\aulas\C#\tempo\bin\Debug\netcoreapp2.1\tempo.deps.json
+C:\Users\46885473820\Documents\aulas\C#\tempo\bin\Debug\netcoreapp2.1\tempo.runtimeconfig.json
+C:\Users\46885473820\Documents\aulas\C#\tempo\bin\Debug\netcoreapp2.1\tempo.runtimeconfig.dev.json
+C:\Users\46885473820\Documents\aulas\C#\tempo\bin\Debug\netcoreapp2.1\tempo.dll
+C:\Users\46885473820\Documents\aulas\C#\tempo\bin\Debug\netcoreapp2.1\tempo.pdb
+C:\Users\46885473820\Documents\aulas\C#\tempo\obj\Debug\netcoreapp2.1\tempo.csprojAssemblyReference.cache
+C:\Users\46885473820\Documents\aulas\C#\tempo\obj\Debug\netcoreapp2.1\tempo.csproj.CoreCompileInputs.cache
+C:\Users\46885473820\Documents\aulas\C#\tempo\obj\Debug\netcoreapp2.1\tempo.AssemblyInfoInputs.cache
+C:\Users\46885473820\Documents\aulas\C#\tempo\obj\Debug\netcoreapp2.1\tempo.AssemblyInfo.cs
+C:\Users\46885473820\Documents\aulas\C#\tempo\obj\Debug\netcoreapp2.1\tempo.dll
+C:\Users\46885473820\Documents\aulas\C#\tempo\obj\Debug\netcoreapp2.1\tempo.pdb
