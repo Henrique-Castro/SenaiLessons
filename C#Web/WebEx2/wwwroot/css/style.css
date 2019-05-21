@@ -1,0 +1,15 @@
+*{
+    box-sizing: border-box;
+    margin: none;
+    padding: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+#DataForm input {
+    font-size: 1.5em;
+}
+body {
+    background-color: black;
+}
