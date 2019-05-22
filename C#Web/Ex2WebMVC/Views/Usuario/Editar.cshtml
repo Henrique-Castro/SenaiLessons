@@ -1,0 +1,26 @@
+@using Ex2WebMVC.Models;
+@{
+Layout = "_Layout";
+ViewBag.Title = "Editar usuário";
+UsuarioModel usuario = new UsuarioModel();
+string dataNascimento = usuario.DataNascimento.ToString("yyyy/mm/dd");
+}
+<div class="container">
+    <br/>
+    <h1>Editar</h1>
+    <h2 style="color:green;">@TempData["mensagem"]</h2>
+    <form action="/Usuario/Editar" method="POST">
+        <div class="form-group">
+            <input type="hidden" value="@usuario.Id" name="id"/>
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" class="form-control">
+            <label for="email">Email:</label>
+            <input type="text" name="email" class="form-control">
+            <label for="senha">Senha:</label>
+            <input type="password" name="senha" class="form-control">
+            <label for="dataNascimento">Data de Nascimento:</label>
+            <input type="date" name="dataNascimento" class="form-control">
+            <input type="submit" value="Editar" class="btn btn-primary btn-lg">
+        </div>
+    </form>
+</div>

@@ -6,6 +6,9 @@ namespace WebMvc.Models
         public string Compositor{get;set;}
         public string Estilo{get;set;}
 
+        public Musica(){
+            
+        }
         public Musica(string titulo, string compositor, string estilo){
             Titulo = titulo;
             Compositor = compositor;

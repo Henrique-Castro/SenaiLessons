@@ -1,11 +1,15 @@
+@model System.Collections.Generic.List<WebMvc.Models.Musica>
 @{
     ViewData["Titulo"] = "Music App";
 }
 <h2>@ViewData["Titulo"]</h2>
 <h3>@ViewData["Nome"], seja bem vindo(a)!</h3>
-<p>@ViewData["NomesRepetidos"]</p>
 <ul>
-    @for(int i = 0; i < (int) ViewData["Vezes"]; i++){
-        <li>@ViewData["Nome"]</li>
+    @foreach(var item in @Model){
+        <li><strong>Título: </strong>@item.Titulo</li>
+        <li><strong>Compositor: </strong>@item.Compositor</li>
+        <li><strong>Estilo: </strong>@item.Estilo</li>
+        <hr/>
     }
 </ul>
+<a asp-action = "Edit" asp-route-id="">Teste</a>

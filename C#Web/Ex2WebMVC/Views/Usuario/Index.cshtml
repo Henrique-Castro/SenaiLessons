@@ -1,0 +1,20 @@
+@{
+Layout = "_Layout";
+ViewBag.Title = "Cadastro de usuários";
+}
+<div class="container">
+    <h1>Cadastrar</h1>
+    <form action="/Usuario/Cadastrar" method="POST">
+        <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" class="form-control">
+            <label for="email">Email:</label>
+            <input type="text" name="email" class="form-control">
+            <label for="senha">Senha:</label>
+            <input type="password" name="senha" class="form-control">
+            <label for="dataNascimento">Data de Nascimento:</label>
+            <input type="date" name="dataNascimento" class="form-control">
+            <input type="submit" value="Cadastrar" class="btn btn-primary btn-lg">
+        </div>
+    </form>
+</div>
