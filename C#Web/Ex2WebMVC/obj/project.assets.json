@@ -11506,11 +11506,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\46885473820\\Downloads\\Ex2WebMVC\\Ex2WebMVC\\Ex2WebMVC.csproj",
+      "projectUniqueName": "c:\\Users\\46885473820\\Documents\\gitHub\\SenaiLessons\\C#Web\\Ex2WebMVC\\Ex2WebMVC.csproj",
       "projectName": "Ex2WebMVC",
-      "projectPath": "C:\\Users\\46885473820\\Downloads\\Ex2WebMVC\\Ex2WebMVC\\Ex2WebMVC.csproj",
+      "projectPath": "c:\\Users\\46885473820\\Documents\\gitHub\\SenaiLessons\\C#Web\\Ex2WebMVC\\Ex2WebMVC.csproj",
       "packagesPath": "C:\\Users\\46885473820\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\46885473820\\Downloads\\Ex2WebMVC\\Ex2WebMVC\\obj\\",
+      "outputPath": "c:\\Users\\46885473820\\Documents\\gitHub\\SenaiLessons\\C#Web\\Ex2WebMVC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
