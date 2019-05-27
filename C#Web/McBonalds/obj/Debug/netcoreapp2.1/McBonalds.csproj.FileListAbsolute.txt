@@ -31,3 +31,4 @@ C:\Users\46885473820\Documents\gitHub\SenaiLessons\C#Web\McBonalds\obj\Debug\net
 C:\Users\46885473820\Documents\gitHub\SenaiLessons\C#Web\McBonalds\obj\Debug\netcoreapp2.1\McBonalds.csproj.CopyComplete
 C:\Users\46885473820\Documents\gitHub\SenaiLessons\C#Web\McBonalds\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_HeaderNavBar.g.cshtml.cs
 C:\Users\46885473820\Documents\gitHub\SenaiLessons\C#Web\McBonalds\obj\Debug\netcoreapp2.1\Razor\Views\Pedido\Pedidos.g.cshtml.cs
+C:\Users\46885473820\Documents\gitHub\SenaiLessons\C#Web\McBonalds\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Sucesso.g.cshtml.cs

@@ -38,16 +38,18 @@
                     <label for="hamburguer">Hamburguer</label>
                     <select id="hamburguer" name="hamburguer" required>
                         <option value="" disabled selected>Selecione</option>
-                        <option value="furioso">Furioso</option>
-                        <option value="combo">Combo</option>
+                        @foreach(var item in  Model.ListaDeHamburgueres as List<Hamburguer>){
+                            <option value="@item.Nome">@item.Nome</option>
+                        }
                     </select>
                 </div>
                 <div>
                     <label for="shake">Shake</label>
-                    <select id="shake">
+                    <select id="shake" name="shake">
                         <option value="" disabled selected>Selecione</option>
-                        <option>Chocolate</option>
-                        <option>Biscoito</option>
+                        @foreach(var item in Model.ListaDeShakes as List<Shake>){
+                            <option value="@item.Nome">@item.Nome</option>
+                        }
                     </select>
                 </div>
             </div>

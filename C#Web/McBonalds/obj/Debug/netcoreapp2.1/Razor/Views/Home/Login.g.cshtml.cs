@@ -62,7 +62,7 @@ using McBonalds.Models;
             WriteLiteral("<hgroup>\r\n            <h1>McBonald\'s</h1>\r\n        </hgroup>\r\n    </header>\r\n\r\n    <main>\r\n        <h2>Login</h2>\r\n        ");
             EndContext();
             BeginContext(169, 555, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "31f2e329f67b48b4a0b228c90a0f50e2", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "74bd89f55847486d81f0f6113fd36864", async() => {
                 BeginContext(209, 508, true);
                 WriteLiteral(@"
             <div>

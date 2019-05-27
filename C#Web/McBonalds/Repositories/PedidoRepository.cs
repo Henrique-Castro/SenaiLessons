@@ -3,27 +3,29 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net.Sockets;
 using McBonalds.Models;
+using McBonalds.ViewModels;
 using Microsoft.EntityFrameworkCore;
 
 namespace McBonalds.Repositories {
     public class PedidoRepository : DbContext {
         private static List<Pedido> ListaDePedidos = new List<Pedido> ();
+        private const string PATH = "Database/Pedidos.csv";
         public static bool GravarPedido (Pedido pedido) {
             try {
                 ulong idPedido;
-                if (!File.Exists ("Database/Pedidos.csv")) {
-                    File.Create ("Database/Pedidos.csv").Close ();
+                if (!File.Exists (PATH)) {
+                    File.Create (PATH).Close ();
                 }
                 if (ListarPedidos () == null) {
                     idPedido = 1;
                 } else {
                     idPedido = (UInt64) ListarPedidos ().Count + 1;
                 }
-                var registro = $"{idPedido};{pedido.Cliente.Nome};{pedido.Cliente.Endereco};{pedido.Cliente.Telefone};{pedido.Cliente.Email};{pedido.Hamburguer.Nome};{pedido.Shake.Nome};{pedido.DataPedido}";
+                var registro = $"{idPedido};{pedido.Cliente.Nome};{pedido.Cliente.Endereco};{pedido.Cliente.Telefone};{pedido.Cliente.Email};{pedido.Hamburguer.Nome};{pedido.Shake.Nome};{pedido.PrecoTotal};{pedido.DataPedido}\n";
 
-                File.AppendAllText ("Database/Pedidos.csv", registro);
+                File.AppendAllText (PATH, registro);
             } catch (Exception e) {
-                System.Console.WriteLine ("Chegou no catch");
+                System.Console.WriteLine ("Chegou no catch!");
                 System.Console.WriteLine (e.Message);
             }
 
@@ -34,7 +36,7 @@ namespace McBonalds.Repositories {
             if (!File.Exists ("Pedidos.csv")) {
                 return null;
             }
-            string[] listaNaoTratada = File.ReadAllLines ("Database/Pedidos.csv");
+            string[] listaNaoTratada = File.ReadAllLines (PATH);
             foreach (string linha in listaNaoTratada) {
                 if (linha != null) {
                     string[] dados = linha.Split (";");
@@ -63,7 +65,15 @@ namespace McBonalds.Repositories {
             return ListaDePedidos;
         }
         public static Pedido BuscarPedido (Pedido pedido) {
-            return pedido;
+            ListaDePedidos = ListarPedidos();
+            foreach (var item in ListaDePedidos)
+            {
+                if(item.Id == pedido.Id && item != null){
+                    return item;
+                }
+            }
+            return null;
+            
         }
     }
 }
