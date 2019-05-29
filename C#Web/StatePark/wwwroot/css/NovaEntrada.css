@@ -1,0 +1,22 @@
+#newCarSection{
+    width: 100vw;
+    padding: 5em;
+}
+#newCarSection .flex-container{
+    justify-content: space-around;
+    text-align: left;
+    width: 100%;
+}
+.inputDiv, .labelDiv{
+    width: 40%;
+    align-self: flex-start;
+}
+input{
+    width: 150%;
+    font-size: 1em;
+}
+label{
+    font-weight: bold;
+    color: black;
+    font-size: 1.2em;
+}

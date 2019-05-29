@@ -1,0 +1,59 @@
+@{
+Html.RenderPartial("_HeaderNav");
+Layout = "_Layout";
+}
+
+<head>
+    <style>
+        #firstImageSection .flex-container {
+            width: 100%;
+            margin: 5em 0;
+            justify-content: space-around;
+        }
+
+        #firstImageSection .flex-container>div {
+            width: 45%;
+        }
+
+        #firstImageSection img {
+            width: 100%;
+            border-radius: 1%;
+        }
+    </style>
+</head>
+<main>
+    <section id="firstImageSection">
+        <div class="flex-container">
+            <div class="imageContent">
+                <img src="~/images/homeImage.png"
+                    alt="Parking lot with about twenty cars in. The point of view is from above.">
+            </div>
+            <div class="textContent">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultrices magna ut lectus vehicula, in
+                    venenatis dui laoreet. Sed lacinia commodo purus. In sagittis, velit sit amet ullamcorper venenatis,
+                    mi
+                    augue finibus ipsum, et elementum massa turpis a odio. Quisque ac neque lectus. Pellentesque nec
+                    ornare
+                    magna. Etiam ultrices elementum viverra. Praesent vitae consequat elit. Maecenas massa ex, consequat
+                    non
+                    sapien nec, facilisis facilisis metus. Donec ornare fringilla consectetur. Maecenas tincidunt
+                    commodo
+                    eros at sollicitudin. Cras auctor erat nec lacus imperdiet, et condimentum elit bibendum. Sed
+                    finibus
+                    volutpat malesuada. Morbi eu ipsum eu erat lobortis tincidunt. Morbi sollicitudin est a sollicitudin
+                    pretium. </p>
+                <p>
+                    Mauris quis sollicitudin ante. Sed id purus id dolor accumsan pellentesque. Integer id metus
+                    finibus,
+                    convallis turpis nec, pharetra urna. Fusce viverra, purus ac vestibulum convallis, massa tellus
+                    fermentum mauris, suscipit facilisis sapien nibh ut erat. Pellentesque efficitur risus in odio
+                    suscipit,
+                    dictum aliquam nisl accumsan. Etiam a aliquet justo. Praesent varius finibus leo fermentum euismod.
+                    Praesent maximus mattis viverra. Vivamus aliquam nec ex nec elementum. Donec vitae sem sed ipsum
+                    congue
+                    pulvinar suscipit non nisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                    inceptos himenaeos. </p>
+            </div>
+        </div>
+    </section>
+</main>
