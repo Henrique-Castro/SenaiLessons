@@ -3,7 +3,7 @@ Layout="_Layout";
 Html.RenderPartial("_HeaderNav");
 }
 <section id="newCarSection">
-    <form method="POST" action="/Atividade/NovaEntrada" class="newCarForm">
+    <form method="POST" action="/Atividade/RegistrarAtividade" class="newCarForm">
         <div class="flex-container">
             <div>
                 <label for="nomeCondutor">Nome do condutor</label>
@@ -14,18 +14,20 @@ Html.RenderPartial("_HeaderNav");
                 <label for="marcaCarro">Marca do carro</label>
                 </br>
                 <select name="marcaCarro">
+                    <option value="Selecione" disabled>Selecione uma marca</option>
                     @foreach(var marca in Model.ListaDeMarcas as List<string>){
                         <option value="@marca">@marca</option>
-                    }
+                        }
                 </select>
             </div>
             <div>
                 <label for="modeloCarro">Modelo</label>
                 </br>
                 <select name="modeloCarro">
+                    <option value="Selecione" disabled>Selecione um modelo</option>
                     @foreach(var modelo in Model.ListaDeModelos as List<string>){
                         <option value="@modelo">@modelo</option>
-                    }
+                        }
                 </select>
             </div>
             <div>
@@ -34,6 +36,9 @@ Html.RenderPartial("_HeaderNav");
                 <input type="text" name="placaCarro" />
             </div>
         </div>
-        <input type="submit" value="Enviar" />
+        <div class="flex-container">
+            <input type="submit" value="Enviar" />
+        </div>
+        
     </form>
 </section>

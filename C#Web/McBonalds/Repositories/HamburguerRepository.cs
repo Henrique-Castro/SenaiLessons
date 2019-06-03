@@ -26,9 +26,9 @@ namespace McBonalds.Repositories {
             }
             return ListaDeHamburgueres;
         }
-        public static float ObterPrecoDe(string nomeHamburguer){
+        public static double ObterPrecoDe(string nomeHamburguer){
             ListaDeHamburgueres = Listar();
-            float preco = 0;
+            double preco = 0;
             foreach (var item in ListaDeHamburgueres)
             {
                 if(item.Nome.Equals(nomeHamburguer)){

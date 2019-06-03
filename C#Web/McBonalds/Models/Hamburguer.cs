@@ -5,7 +5,7 @@ namespace McBonalds.Models
         public Hamburguer(string nome){
             Nome = nome;
         }
-        public Hamburguer(ulong id, string nome, float preco){
+        public Hamburguer(ulong id, string nome, double preco){
             Id = id;
             Nome = nome;
             Preco = preco;

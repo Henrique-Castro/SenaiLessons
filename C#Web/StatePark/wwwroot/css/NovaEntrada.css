@@ -11,7 +11,7 @@
     width: 40%;
     align-self: flex-start;
 }
-input{
+input, select{
     width: 150%;
     font-size: 1em;
 }
@@ -19,4 +19,9 @@ label{
     font-weight: bold;
     color: black;
     font-size: 1.2em;
+}
+input[type="submit"]{
+    width: 10%;
+    height: 2em;
+    margin-top: 1em;
 }

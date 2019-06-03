@@ -48,8 +48,9 @@ namespace McBonalds.Controllers
                 shake: shake,
                 dataPedido: DateTime.Now
             );
+            PedidoRepository pedidoRepository = new PedidoRepository();
             pedido.PrecoTotal = hamburguer.Preco + shake.Preco;
-            PedidoRepository.GravarPedido(pedido);
+            pedidoRepository.Inserir(pedido);
             ViewData["Funcao"] = "Pedido";
             return View("Sucesso");
         }

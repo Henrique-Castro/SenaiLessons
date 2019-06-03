@@ -1,13 +1,35 @@
 @{
-    Layout = "_Layout";
-    Html.RenderPartial("_HeaderNav");
+Layout = "_Layout";
+Html.RenderPartial("_HeaderNav");
 }
-<h2>Atividades do estacionamento</h2>
-<table>
-    <thead>
-        <th>Id</th>
-        <th>Nome do condutor</th>
-        <th>Marca do carro</th>
-        <th>Modelo do carro</th>
-    </thead>
-</table>
+<section id="table">
+    <div class="container">
+        <div class="content">
+            <h2>Atividades do estacionamento</h2>
+            <table>
+                <thead>
+                    <th>Id</th>
+                    <th>Nome do condutor</th>
+                    <th>Marca do carro</th>
+                    <th>Modelo do carro</th>
+                </thead>
+                @foreach(var item in Model.ListaDeAtividades as List<StatePark.Models.AtividadeModel>){
+                    <tr>
+                        <td>
+                            @item.Id
+                        </td>
+                        <td>
+                            @item.Condutor.NomeCondutor
+                        </td>
+                        <td>
+                            @item.Carro.Marca
+                        </td>
+                        <td>
+                            @item.Carro.Placa
+                        </td>
+                    </tr>
+                    }
+            </table>
+        </div>
+    </div>
+</section>

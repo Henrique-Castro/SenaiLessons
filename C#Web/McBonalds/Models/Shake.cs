@@ -5,7 +5,7 @@ namespace McBonalds.Models
         public Shake(string nome){
             Nome = nome;
         }
-        public Shake(ulong id, string nome, float preco){
+        public Shake(ulong id, string nome, double preco){
             Id = id;
             Nome = nome;
             Preco = preco;

@@ -1,0 +1,34 @@
+#table{
+    margin-top: 5em;
+    margin-bottom: 5em;
+    color: rgba(36, 33, 33, 0.808);
+    width: 100%;
+    height: 100%;
+}
+h2{
+    margin: 0 7em;
+}
+table{
+    background-color: rgba(36, 33, 33, 0.808);
+    width: 75%;
+    margin: auto;
+}
+th{
+    border-top: 0.2em solid rgba(3, 3, 3, 0.123);
+    border-bottom: 0.2em solid rgba(3, 3, 3, 0.123);
+    color: #ffc306;
+    width: 100%;
+    text-align: center;
+    padding: 0.3em;
+}
+tr{
+    box-sizing: border-box;
+    display: flex;
+    text-align: center;
+    padding: 0.3em 0;
+}
+td{
+    color:  white;
+    border-bottom: 0.2em solid rgba(3, 3, 3, 0.123);
+    width: 25%;
+}

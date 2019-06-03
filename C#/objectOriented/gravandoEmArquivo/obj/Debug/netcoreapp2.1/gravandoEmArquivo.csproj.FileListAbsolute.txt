@@ -1,4 +1,0 @@
-C:\Users\46885473820\Documents\gitHub\SenaiLessons\objectOriented\gravandoEmArquivo\obj\Debug\netcoreapp2.1\gravandoEmArquivo.csprojAssemblyReference.cache
-C:\Users\46885473820\Documents\gitHub\SenaiLessons\objectOriented\gravandoEmArquivo\obj\Debug\netcoreapp2.1\gravandoEmArquivo.csproj.CoreCompileInputs.cache
-C:\Users\46885473820\Documents\gitHub\SenaiLessons\objectOriented\gravandoEmArquivo\obj\Debug\netcoreapp2.1\gravandoEmArquivo.AssemblyInfoInputs.cache
-C:\Users\46885473820\Documents\gitHub\SenaiLessons\objectOriented\gravandoEmArquivo\obj\Debug\netcoreapp2.1\gravandoEmArquivo.AssemblyInfo.cs

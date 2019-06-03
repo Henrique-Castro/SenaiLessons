@@ -27,9 +27,9 @@ namespace McBonalds.Repositories
             }
             return ListaDeShakes;
         }
-        public static float ObterPrecoDe(string nomeShake){
+        public static double ObterPrecoDe(string nomeShake){
             ListaDeShakes = Listar();
-            float preco = 0;
+            double preco = 0;
             foreach (var item in ListaDeShakes)
             {
                 if(item.Nome.Equals(nomeShake)){

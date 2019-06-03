@@ -8,10 +8,11 @@ namespace McBonalds.ViewModels {
         public Cliente Cliente { get; set; }
         public Hamburguer Hamburguer { get; set; }
         public Shake Shake { get; set; }
-        public DateTime DataPedido { get; set; }
         public List<Hamburguer> ListaDeHamburgueres{get;set;}
         public List<Shake> ListaDeShakes{get;set;}
-        public float PrecoTotal{get;set;}
+        public double PrecoTotal{get;set;}
+        public DateTime DataDoPedido { get;set; }
+
         public Pedido () {
 
         }
@@ -19,13 +20,13 @@ namespace McBonalds.ViewModels {
             Cliente = cliente;
             Hamburguer = hamburguer;
             Shake = shake;
-            DataPedido = dataPedido;
+            DataDoPedido = dataPedido;
         }
         public Pedido (ulong id, Cliente cliente, Hamburguer hamburguer, Shake shake, DateTime dataPedido) {
             Cliente = cliente;
             Hamburguer = hamburguer;
             Shake = shake;
-            DataPedido = dataPedido;
+            DataDoPedido = dataPedido;
         }
         public Pedido (List<Hamburguer> listaDeHamburgueres, List<Shake> listaDeShakes){
             ListaDeHamburgueres = listaDeHamburgueres;

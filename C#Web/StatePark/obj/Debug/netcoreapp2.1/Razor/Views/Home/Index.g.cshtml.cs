@@ -52,7 +52,7 @@ Layout = "_Layout";
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(65, 390, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0cb26d30cb3f4197bf8100df498a5946", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f486832b8282411591bb2103a12731a7", async() => {
                 BeginContext(71, 377, true);
                 WriteLiteral(@"
     <style>
@@ -89,7 +89,7 @@ Layout = "_Layout";
             WriteLiteral("\r\n<main>\r\n    <section id=\"firstImageSection\">\r\n        <div class=\"flex-container\">\r\n            <div class=\"imageContent\">\r\n                ");
             EndContext();
             BeginContext(597, 133, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "829e0e453731434a98ffb0fb847ffed7", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "3c2496fe803c4c20ad84cc129fff44c4", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

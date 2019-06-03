@@ -3,10 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewData["ViewTitle"]</title>
+    <title>@ViewData["ViewName"]</title>
     <link rel="stylesheet" href="~/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="~/css/novaEntrada.css">
+    
+    @if("Nova Entrada".Equals((string)ViewData["ViewName"])){
+        <link rel="stylesheet" href="~/css/novaEntrada.css">
+    }
+    @if("Balanço de Atividade".Equals((string)ViewData["ViewName"])){
+        <link rel="stylesheet" href="~/css/balancoDeAtividades.css">   
+    }
 </head>
 <body>
     <main>
