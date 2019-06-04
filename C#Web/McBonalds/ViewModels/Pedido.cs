@@ -28,10 +28,10 @@ namespace McBonalds.ViewModels {
             Shake = shake;
             DataDoPedido = dataPedido;
         }
-        public Pedido (List<Hamburguer> listaDeHamburgueres, List<Shake> listaDeShakes){
+        public Pedido (List<Hamburguer> listaDeHamburgueres, List<Shake> listaDeShakes, Cliente cliente){
             ListaDeHamburgueres = listaDeHamburgueres;
             ListaDeShakes = listaDeShakes;
+            Cliente = cliente;
         }
-
     }
 }

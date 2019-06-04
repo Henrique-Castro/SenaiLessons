@@ -9,7 +9,7 @@ namespace McBonalds.Models {
         public string Telefone { get; set; }
         public string Email { get; set; }
         public string Senha { get; set; }
-        public DateTime DataNascimento { get; set; }
+        public string DataNascimento { get; set; }
 
         public Cliente () {
 
@@ -25,6 +25,14 @@ namespace McBonalds.Models {
             Endereco = endereco;
             Telefone = telefone;
             Email = email;
+        }
+        public Cliente (string nome, string endereco, string telefone, string email, string senha, string dataNascimento) {
+            Nome = nome;
+            Endereco = endereco;
+            Telefone = telefone;
+            Email = email;
+            Senha = senha;
+            DataNascimento = dataNascimento;
         }
     }
 }
