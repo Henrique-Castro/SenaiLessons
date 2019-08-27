@@ -60,7 +60,7 @@ namespace Senai.Optus.WebApi.Repositories
             using(OptusContext ctx =new OptusContext())
             {
                 return ctx.Artistas
-        .Where(x => x.IdEstilo.Contains(id))
+        .Where(x => x.IdEstilo == id)
         .ToList();
             }
         }
@@ -68,7 +68,7 @@ namespace Senai.Optus.WebApi.Repositories
         {
             using(OptusContext ctx = new OptusContext())
             {
-                return ctx.
+                return ctx.Artistas.Where(x => x.Nome == nomeEstilo).ToList();
             }
         }
     }

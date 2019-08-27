@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Senai.Optus.WebApi.Domains;
@@ -20,6 +21,7 @@ namespace Senai.Optus.WebApi.Controllers
         /// Listar todos os estilos
         /// </summary>
         /// <returns>Lista de estilos</returns>
+        [Authorize]
         [HttpGet]
         public IActionResult Listar()
         {
@@ -31,6 +33,7 @@ namespace Senai.Optus.WebApi.Controllers
         /// </summary>
         /// <param name="novoEstilo"> Estilo </param>
         /// <returns></returns>
+        [Authorize(Roles ="ADMINISTRADOR")]
         [HttpPost]
         public IActionResult Cadastrar(Estilos novoEstilo)
         {
@@ -50,6 +53,7 @@ namespace Senai.Optus.WebApi.Controllers
         /// </summary>
         /// <param name="estiloModificado"> Novo estilo</param>
         /// <returns></returns>
+        [Authorize(Roles = "ADMINISTRADOR")]
         [HttpPut]
         public IActionResult Atualizar(Estilos estiloModificado)
         {
@@ -69,16 +73,24 @@ namespace Senai.Optus.WebApi.Controllers
         /// </summary>
         /// <param name="id"> id</param>
         /// <returns></returns>
+        [Authorize(Roles = "ADMINISTRADOR")]
         [HttpDelete("{id}")]
         public IActionResult Deletar(int id)
         {
             EstiloRepository.Deletar(id);
             return Ok();
         }
-        [HttpGet("{id}/artistas")]
-        public IactionResult BuscarArtistasPorIdEstilo(int id)
+        [Authorize]
+        [HttpGet("buscar/{id}/artistas")]
+        public IActionResult BuscarArtistasPorIdEstilo(int id)
         {
             return Ok(ArtistaRepository.BuscarArtistasPorIdEstilo(id));
+        }
+        [Authorize]
+        [HttpGet("quantidade")]
+        public IActionResult QuantidadeEstilos()
+        {
+            return Ok(EstiloRepository.Listar().Count());
         }
 
     }

@@ -15,6 +15,7 @@ namespace Senai.Gufos.WebApi.Repositories
                 return ctx.Categorias.ToList();
             }
         }
+    
         public void Cadastrar(Categorias categoria)
         {
             using(GufosContext ctx = new GufosContext())
@@ -49,7 +50,11 @@ namespace Senai.Gufos.WebApi.Repositories
             using(GufosContext ctx = new GufosContext())
             {
                 Categorias CategoriaBuscada = ctx.Categorias.FirstOrDefault(x => x.IdCategoria == categoriaModificada.IdCategoria);
-                ctx.Categorias.Update(categoriaModificada);
+             
+                CategoriaBuscada.Nome = categoriaModificada.Nome;
+                
+                ctx.Categorias.Update(CategoriaBuscada);
+            
                 ctx.SaveChanges();
             }
         }
