@@ -55,5 +55,21 @@ namespace Senai.Optus.WebApi.Repositories
                 return ctx.Artistas.FirstOrDefault(x => x.IdArtista == id);
             }
         }
+        public List<Artistas> BuscarArtistasPorIdEstilo(int id)
+        {
+            using(OptusContext ctx =new OptusContext())
+            {
+                return ctx.Artistas
+        .Where(x => x.IdEstilo.Contains(id))
+        .ToList();
+            }
+        }
+        public List<Artistas> BuscarArtistasPorNomeEstilo(string nomeEstilo)
+        {
+            using(OptusContext ctx = new OptusContext())
+            {
+                return ctx.
+            }
+        }
     }
 }
