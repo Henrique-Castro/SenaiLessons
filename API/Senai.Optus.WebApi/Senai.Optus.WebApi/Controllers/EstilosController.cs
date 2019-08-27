@@ -14,6 +14,7 @@ namespace Senai.Optus.WebApi.Controllers
     [ApiController]
     public class EstilosController : ControllerBase
     {
+        ArtistaRepository ArtistaRepository = new ArtistaRepository();
         EstiloRepository EstiloRepository = new EstiloRepository();
         /// <summary>
         /// Listar todos os estilos
@@ -73,6 +74,11 @@ namespace Senai.Optus.WebApi.Controllers
         {
             EstiloRepository.Deletar(id);
             return Ok();
+        }
+        [HttpGet("{id}/artistas")]
+        public IactionResult BuscarArtistasPorIdEstilo(int id)
+        {
+            return Ok(ArtistaRepository.BuscarArtistasPorIdEstilo(id));
         }
 
     }
