@@ -22,7 +22,20 @@ namespace Senai.Ekips.WebApi.Controllers
         {
             return Ok(CargosRepository.Listar());
         }
-        [Authorize(Roles = "ADMINISTRADOR")]
+        [Authorize]
+        [HttpGet("{id}")]
+        public IActionResult BuscarPorId(int id)
+        {
+            try
+            {
+                return Ok(CargosRepository.BuscarPorId(id));
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [Authorize]
         [HttpPost]
         public IActionResult Cadastrar(Cargos cargo)
         {
@@ -36,5 +49,22 @@ namespace Senai.Ekips.WebApi.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [Authorize]
+        [HttpPut("{id}")]
+        public IActionResult Atualizar(int id, Cargos cargoModificado)
+        {
+            try
+            {
+                cargoModificado.IdCargo = id;
+                CargosRepository.Atualizar(cargoModificado);
+                return Ok();
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
     }
 }

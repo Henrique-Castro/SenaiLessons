@@ -22,7 +22,7 @@ namespace Senai.Ekips.WebApi.Controllers
         {
             return Ok(DepartamentosRepository.Listar());
         }
-        [Authorize(Roles = "ADMINISTRADOR")]
+        [Authorize]
         [HttpPost]
         public IActionResult Cadastrar(Departamentos departamento)
         {
@@ -36,5 +36,19 @@ namespace Senai.Ekips.WebApi.Controllers
                 return BadRequest(ex.Message);
             }
         }
+        [Authorize]
+        [HttpGet("{id}")]
+        public IActionResult BuscarPorId(int id)
+        {
+            try
+            {
+                return Ok(DepartamentosRepository.BuscarPorId(id));
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
     }
 }

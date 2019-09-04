@@ -24,5 +24,28 @@ namespace Senai.Ekips.WebApi.Repositories
                 return ctx.Cargos.ToList();
             }
         }
+
+        public Cargos BuscarPorId(int id)
+        {
+            using (EkipsContext ctx = new EkipsContext())
+            {
+                return ctx.Cargos.Find(id);
+            }
+        }
+
+        public void Atualizar(Cargos cargoModificado)
+        {
+            using (EkipsContext ctx = new EkipsContext())
+            {
+                Cargos cargoEncontrado = BuscarPorId(cargoModificado.IdCargo);
+                if (cargoEncontrado == null)
+                    throw new System.ArgumentException("Este cargo provavelmente não existe.");
+
+                cargoEncontrado.Nome = cargoModificado.Nome;
+                
+                ctx.Cargos.Update(cargoEncontrado);
+                ctx.SaveChanges();
+            }
+        }
     }
 }

@@ -24,5 +24,13 @@ namespace Senai.Ekips.WebApi.Repositories
                 return ctx.Departamentos.ToList();
             }
         }
+
+        public Departamentos BuscarPorId(int id)
+        {
+            using (EkipsContext ctx = new EkipsContext())
+            {
+                return ctx.Departamentos.Find(id);
+            }
+        }
     }
 }
