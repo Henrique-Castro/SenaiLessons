@@ -11,5 +11,7 @@ namespace Senai.AutoPecas.WebApi.Interfaces
         void Cadastrar(Fornecedores novoFornecedor);
         Fornecedores BuscarPorId(int id);
         void Deletar(int IdFornecedor);
+        List<Fornecedores> ListarTodos();
+        Fornecedores BuscarPorIdUsuarioVinculado(int id);
     }
 }

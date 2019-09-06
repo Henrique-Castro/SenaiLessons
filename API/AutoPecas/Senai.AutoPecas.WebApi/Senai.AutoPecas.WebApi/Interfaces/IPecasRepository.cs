@@ -14,6 +14,7 @@ namespace Senai.AutoPecas.WebApi.Interfaces
         void Cadastrar(Pecas novaPeca);
         void Atualizar(Pecas pecaModificada);
         void Deletar(int codigo);
-
+        List<string> ValorGanhos();
+        string CalcularPedido(int codigo, int quantidade);
     }
 }

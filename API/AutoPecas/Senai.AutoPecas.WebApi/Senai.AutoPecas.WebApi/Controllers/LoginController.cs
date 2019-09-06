@@ -20,10 +20,13 @@ namespace Senai.AutoPecas.WebApi.Controllers
     public class LoginController : ControllerBase
     {
         private IUsuariosRepository IUsuariosRepository;
+        private IFornecedoresRepository IFornecedoresRepository;
+
 
         public LoginController()
         {
             IUsuariosRepository = new UsuariosRepository();
+            IFornecedoresRepository = new FornecedoresRepository();
         }
         [HttpPost]
         public IActionResult Login(LoginViewModel dadosLogin)
@@ -38,7 +41,7 @@ namespace Senai.AutoPecas.WebApi.Controllers
                 var claims = new[]
                 {
                     new Claim(JwtRegisteredClaimNames.Email, UsuarioBuscado.Email),
-                    new Claim(JwtRegisteredClaimNames.Jti, UsuarioBuscado.UsuarioId.ToString())
+                    new Claim(JwtRegisteredClaimNames.Jti, IFornecedoresRepository.BuscarPorIdUsuarioVinculado(UsuarioBuscado.UsuarioId).FornecedorId.ToString())
                 };
                 var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("autopecas-chave-autenticacao"));
 

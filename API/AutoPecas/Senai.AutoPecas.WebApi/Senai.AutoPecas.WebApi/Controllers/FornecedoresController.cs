@@ -23,8 +23,8 @@ namespace Senai.AutoPecas.WebApi.Controllers
             IFornecedoresRepository = new FornecedoresRepository();
         }
 
-        [Authorize]
-        [HttpGet("id")]
+       
+        [HttpGet("{id}")]
         public IActionResult BuscarPorCodigo(int id)
         {
             try
@@ -37,7 +37,7 @@ namespace Senai.AutoPecas.WebApi.Controllers
             }
         }
 
-        [Authorize]
+       
         [HttpPost]
         public IActionResult Cadastrar(Fornecedores novoFornecedor)
         {
@@ -47,6 +47,23 @@ namespace Senai.AutoPecas.WebApi.Controllers
                 return Ok();
             }
             catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        /*Disponibilizar um endpoint público para que seja apresentado os dados de todos os fornecedores.
+GET /api/fornecedores*/
+
+       
+        [HttpGet]
+        public IActionResult ListarDadosFornecedores()
+        {
+            try
+            {
+                return Ok(IFornecedoresRepository.ListarTodos());
+            }
+            catch(Exception ex)
             {
                 return BadRequest(ex.Message);
             }

@@ -55,6 +55,16 @@ namespace Senai.AutoPecas.WebApi.Repositories
             }
         }
 
+        public string CalcularPedido(int codigo, int quantidade)
+        {
+            using(AutoPecasContext ctx = new AutoPecasContext())
+            {
+                decimal custoDaPeca = Convert.ToDecimal(ctx.Pecas.FirstOrDefault(x => x.PecaCodigo == codigo).PrecoVenda);
+
+                return ("R$" + (custoDaPeca * quantidade).ToString());
+            }
+        }
+
         public void Deletar(int codigo)
         {
             using (AutoPecasContext ctx = new AutoPecasContext())
@@ -82,6 +92,27 @@ namespace Senai.AutoPecas.WebApi.Repositories
             using (AutoPecasContext ctx = new AutoPecasContext())
             {
                 return ctx.Pecas.ToList();
+            }
+        }
+
+        public List<string> ValorGanhos()
+        {
+            using(AutoPecasContext ctx = new AutoPecasContext())
+            {
+                decimal lucroPossivel = 0, custoTotal = 0, porcentagemLucro = 0;
+                List<string> listaDeValores = new List<string>();
+                foreach(var peca in ctx.Pecas)
+                {
+                    custoTotal = custoTotal + peca.PrecoCusto;
+                    lucroPossivel = lucroPossivel + (peca.PrecoVenda - peca.PrecoCusto);
+                }
+
+                porcentagemLucro = ((lucroPossivel - custoTotal) / custoTotal)*100;
+                //O primeiro índice é em porcentagem, o segundo é o valor bruto
+                listaDeValores.Add(porcentagemLucro.ToString() + "%");
+                listaDeValores.Add("R$" + lucroPossivel.ToString());
+
+                return listaDeValores;
             }
         }
     }

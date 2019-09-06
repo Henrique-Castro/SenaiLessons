@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -24,7 +25,7 @@ namespace Senai.AutoPecas.WebApi.Controllers
             IPecasRepository = new PecasRepository();
         }
 
-        [Authorize]
+        
         [HttpGet]
         public IActionResult Listar()
         {
@@ -38,8 +39,8 @@ namespace Senai.AutoPecas.WebApi.Controllers
             }
         }
 
-        [Authorize]
-        [HttpGet("codigo")]
+        
+        [HttpGet("{codigo}")]
         public IActionResult BuscarPorCodigo(int codigo)
         {
             try
@@ -52,8 +53,8 @@ namespace Senai.AutoPecas.WebApi.Controllers
             }
         }
 
-        [Authorize]
-        [HttpPut("codigo")]
+        
+        [HttpPut("{codigo}")]
         public IActionResult Atualizar(int codigo, Pecas pecaModificada)
         {
             try
@@ -76,13 +77,14 @@ namespace Senai.AutoPecas.WebApi.Controllers
             }
         }
 
-        [Authorize]
+        
         [HttpPost]
         public IActionResult Cadastrar(Pecas novaPeca)
         {
             try
             {
-                novaPeca.FornecedorId = Convert.ToInt32(HttpContext.User.Claims.FirstOrDefault(x => x.Type == JwtRegisteredClaimNames.Jti).Value);
+                int idFornecedor = Convert.ToInt32(HttpContext.User.Claims.FirstOrDefault(x => x.Type == JwtRegisteredClaimNames.Jti).Value);
+                novaPeca.FornecedorId = idFornecedor;
                 IPecasRepository.Cadastrar(novaPeca);
                 return Ok();
             }
@@ -92,18 +94,40 @@ namespace Senai.AutoPecas.WebApi.Controllers
             }
         }
 
+
         /*Disponibilizar um endpoint para que seja mostrado o valor de ganho que a autopeças irá obter calculando
          * o preço de venda sob o preço de custo. Mostrar a porcentagem e um outro campo mostrando a diferença em reais entre um e outro.*/
-        //[HttpGet("precos")]
-        //public IActionResult ValorGanhos() { }
+        
+        [HttpGet("ganhos")]
+        public IActionResult ValorGanhos()
+        {
+            try
+            {
+                return Ok(IPecasRepository.ValorGanhos());
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        /*Disponibilizar um endpoint para que ao enviar a quantidade de itens e o id da peça, seja calculado o valor total e este valor seja retornado.
+        POST /api/pecas/calcular*/
+        
+        [HttpPost("calcular")]
+        public IActionResult Calcular(int codigo , int quantidade)
+        {
+            try
+            {
+                return Ok(IPecasRepository.CalcularPedido(codigo , quantidade));
+            }
+            catch(Exception ex)
+            {
+                return BadRequest();
+            }
+        }
+        
 
-        /*Disponibilizar um endpoint público para que seja apresentado os dados de todos os fornecedores.
-GET /api/fornecedores
+        
 
-Disponibilizar um endpoint público para que seja apresentado os dados de todos os usuários, mas com um detalhe: a senha não deverá ser mostrada.
-GET /api/usuarios
-
-Disponibilizar um endpoint para que ao enviar a quantidade de itens e o id da peça, seja calculado o valor total e este valor seja retornado.
-POST /api/pecas/calcular*/
     }
 }

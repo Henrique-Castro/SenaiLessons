@@ -33,4 +33,6 @@ CREATE TABLE Funcionarios(
 	IdUsuarioVinculado INT FOREIGN KEY REFERENCES Usuarios(IdUsuario)
 );
 
-
+SELECT * FROM Usuarios
+SELECT * FROM Funcionarios
+SELECT * FROM Cargos
