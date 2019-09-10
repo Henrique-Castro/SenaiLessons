@@ -37,5 +37,34 @@ namespace Senai.OpFlix.WebApi.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [Authorize(Roles = "ADMINISTRADOR")]
+        [HttpPut("{id}")]
+        public IActionResult Atualizar(int id, FormatosLancamentos formatoModificado)
+        {
+            try
+            {
+                formatoModificado.IdFormatoLancamento = id;
+                IFormatosRepository.Atualizar(formatoModificado);
+                return Ok();
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet]
+        public IActionResult Listar()
+        {
+            try
+            {
+                return Ok(IFormatosRepository.Listar());
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }

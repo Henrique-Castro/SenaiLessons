@@ -33,17 +33,19 @@ namespace Senai.OpFlix.WebApi.Repositories
 
         public void Deletar(int id)
         {
-            throw new NotImplementedException();
-        }
-
-        public void Deletar(string titulo)
-        {
-            throw new NotImplementedException();
+            using (OpflixContext ctx = new OpflixContext())
+            {
+                ctx.FormatosLancamentos.Remove(ctx.FormatosLancamentos.FirstOrDefault(x => x.IdFormatoLancamento == id));
+                ctx.SaveChanges();
+            }
         }
 
         public List<FormatosLancamentos> Listar()
         {
-            throw new NotImplementedException();
+            using(OpflixContext ctx = new OpflixContext())
+            {
+                return ctx.FormatosLancamentos.ToList();
+            }
         }
     }
 }

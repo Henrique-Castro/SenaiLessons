@@ -24,6 +24,7 @@ namespace Senai.OpFlix.WebApi.Repositories
             {
                 ctx.Usuarios.Add(novoUsuario);
                 ctx.SaveChanges();
+                
             }
         }
     }

@@ -10,7 +10,6 @@ namespace Senai.OpFlix.WebApi.Interfaces
     {
         void Cadastrar(FormatosLancamentos novoFormato);
         void Deletar(int id);
-        void Deletar(string titulo);
         List<FormatosLancamentos> Listar();
         void Atualizar(FormatosLancamentos formatoModificado);
     }

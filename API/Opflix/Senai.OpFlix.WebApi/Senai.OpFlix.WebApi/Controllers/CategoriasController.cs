@@ -81,6 +81,7 @@ namespace Senai.OpFlix.WebApi.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
         [Authorize(Roles = "ADMINISTRADOR")]
         [HttpDelete("{titulo}")]
         public IActionResult Deletar(string titulo)

@@ -9,5 +9,7 @@ namespace Senai.OpFlix.WebApi.Interfaces
     interface IPlataformasRepository
     {
         void Cadastrar(Plataformas novaPlataforma);
+        List<Plataformas> Listar();
+        void Atualizar(Plataformas plataformaModificada);
     }
 }
