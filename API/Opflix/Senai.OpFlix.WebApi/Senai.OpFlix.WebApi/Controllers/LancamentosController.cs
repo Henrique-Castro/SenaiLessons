@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
@@ -18,10 +19,15 @@ namespace Senai.OpFlix.WebApi.Controllers
     {
 
         ILancamentosRepository ILancamentosRepository;
+        ICategoriasRepository ICategoriasRepository;
+        IPlataformasRepository IPlataformasRepository;
+
 
         public LancamentosController()
         {
             ILancamentosRepository = new LancamentosRepository();
+            ICategoriasRepository = new CategoriasRepository();
+            IPlataformasRepository = new PlataformasRepository();
         }
 
         [Authorize(Roles = "ADMINISTRADOR")]
@@ -106,6 +112,88 @@ namespace Senai.OpFlix.WebApi.Controllers
                 return Ok();
             }
             catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [Authorize]
+        [HttpPost("Favoritar")]
+        public IActionResult Favoritar(int idLancamentoFavoritado)
+        {
+            try
+            {
+                int IdUsuarioLogado = Convert.ToInt32(HttpContext.User.Claims.FirstOrDefault(x => x.Type == JwtRegisteredClaimNames.Jti));
+                ILancamentosRepository.Favoritar(IdUsuarioLogado, idLancamentoFavoritado);
+                return Ok();
+            }
+            catch(Exception ex)
+            {
+                return BadRequest();
+            }
+        }
+
+        [HttpGet("OrdenarPorData")]
+        public IActionResult OrdenarPorData()
+        {
+            try
+            {
+                return Ok(ILancamentosRepository.ListarPorDataLancamento());
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet("OrdenarPorCategoria")]
+        public IActionResult OrdenarPorCategoria()
+        {
+            try
+            {
+                return Ok(ILancamentosRepository.ListarPorCategoria());
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet("OrdenarPorEstreiaECategoria")]
+        public IActionResult OrdenarPorEstreiaECategoria()
+        {
+            try
+            {
+                return Ok(ILancamentosRepository.ListarPorEstreiaECategoria());
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet("ListarFavoritos/{id}")]
+        public IActionResult ListarFavoritos(int idUsuario)
+        {
+            try
+            {
+                return Ok(ILancamentosRepository.ListarFavoritos(idUsuario));
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet("ListarPorPlataforma/{nomePlataforma}")]
+        public IActionResult ListarPorPlataforma(string nomePlataforma)
+        {
+            try
+            {
+                Plataformas plataformaEncontrada = IPlataformasRepository.BuscarPorNome(nomePlataforma);
+                return Ok(ILancamentosRepository.ListarPorPlataformas(plataformaEncontrada.IdPlataforma));
+            }
+            catch(Exception ex)
             {
                 return BadRequest(ex.Message);
             }

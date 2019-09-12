@@ -11,5 +11,6 @@ namespace Senai.OpFlix.WebApi.Interfaces
         void Cadastrar(Plataformas novaPlataforma);
         List<Plataformas> Listar();
         void Atualizar(Plataformas plataformaModificada);
+        Plataformas BuscarPorNome(string nome);
     }
 }

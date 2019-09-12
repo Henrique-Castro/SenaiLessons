@@ -5,6 +5,11 @@ namespace Senai.OpFlix.WebApi.Domains
 {
     public partial class Lancamentos
     {
+        public Lancamentos()
+        {
+            UsuariosLancamentos = new HashSet<UsuariosLancamentos>();
+        }
+
         public int IdLancamento { get; set; }
         public string Titulo { get; set; }
         public string Sinopse { get; set; }
@@ -19,5 +24,6 @@ namespace Senai.OpFlix.WebApi.Domains
         public Categorias CategoriaNavigation { get; set; }
         public FormatosLancamentos FormatoNavigation { get; set; }
         public Plataformas PlataformaNavigation { get; set; }
+        public ICollection<UsuariosLancamentos> UsuariosLancamentos { get; set; }
     }
 }

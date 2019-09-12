@@ -13,5 +13,8 @@ namespace Senai.OpFlix.WebApi.Interfaces
         void Deletar(string titulo);
         List<Categorias> Listar();
         void Atualizar(Categorias categoriaModificada);
+        void Favoritar(int idUsuario, int idCategoria);
+        List<UsuariosCategorias> ListarFavoritos(int idUsuario);
+        Categorias BuscarPorNome(string nome);
     }
 }

@@ -6,9 +6,11 @@ CREATE TABLE Usuarios (
 	Tipo VARCHAR(13) NOT NULL,
 	Nome TEXT NOT NULL,
 	Email VARCHAR(255) UNIQUE NOT NULL,
-	Senha VARCHAR(28) NOT NULL
+	Senha VARCHAR(MAX) NOT NULL
 );
+select * from Usuarios
 CREATE TABLE FotosUsuarios (
+	Id INT PRIMARY KEY IDENTITY NOT NULL,
 	IdUsuario INT FOREIGN KEY REFERENCES Usuarios(IdUsuario) NOT NULL,
 	Imagem VARBINARY(MAX) 
 );
@@ -18,6 +20,7 @@ CREATE TABLE Categorias(
 	Descricao TEXT NOT NULL
 );
 CREATE TABLE UsuariosCategorias(
+	Id INT PRIMARY KEY NOT NULL IDENTITY,
 	IdUsuario INT FOREIGN KEY REFERENCES Usuarios(IdUsuario) NOT NULL,
 	IdCategoria INT FOREIGN KEY REFERENCES Categorias(IdCategoria)
 );
@@ -40,12 +43,11 @@ CREATE TABLE Lancamentos(
 	QtdEpisodios INT DEFAULT 1 NOT NULL,
 	Plataforma INT FOREIGN KEY REFERENCES Plataformas(IdPlataforma)
 );
-CREATE TABLE LancamentosUsuarios(
+CREATE TABLE UsuariosLancamentos(
+	Id INT PRIMARY KEY IDENTITY NOT NULL,
 	IdUsuario INT FOREIGN KEY REFERENCES Usuarios(IdUsuario) NOT NULL,
 	IdLancamento INT FOREIGN KEY REFERENCES Lancamentos(IdLancamento)
 );
-ALTER TABLE Lancamentos ADD Visivel Bit DEFAULT 0;
-
 ---FUNCTIONS, PROCEDURES AND VIEWS
 --INSERIR IMAGEM
 GO

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -92,6 +93,36 @@ namespace Senai.OpFlix.WebApi.Controllers
                 return Ok();
             }
             catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [Authorize]
+        [HttpPost("Favoritar")]
+        public IActionResult Favoritar(int idCategoria)
+        {
+            try
+            {
+                int idUsuario = Convert.ToInt32(HttpContext.User.Claims.FirstOrDefault(x => x.Type == JwtRegisteredClaimNames.Jti).Value);
+                ICategoriasRepository.Favoritar(idUsuario, idCategoria);
+                return Ok();
+            }
+            catch(Exception ex)
+            {
+                return BadRequest();
+            }
+        }
+
+        [Authorize]
+        [HttpGet("ListarFavoritos/{id}")]
+        public IActionResult ListarFavoritos(int idUsuario)
+        {
+            try
+            {
+                return Ok(ICategoriasRepository.ListarFavoritos(idUsuario));
+            }
+            catch(Exception ex)
             {
                 return BadRequest(ex.Message);
             }

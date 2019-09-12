@@ -23,6 +23,14 @@ namespace Senai.OpFlix.WebApi.Repositories
             }
         }
 
+        public Categorias BuscarPorNome(string nome)
+        {
+            using(OpflixContext ctx = new OpflixContext())
+            {
+                return ctx.Categorias.First(x => x.Nome.Equals(nome));
+            }
+        }
+
         public void Cadastrar(Categorias novaCategoria)
         {
            using(OpflixContext ctx = new OpflixContext())
@@ -50,11 +58,32 @@ namespace Senai.OpFlix.WebApi.Repositories
             }
         }
 
+        public void Favoritar(int idUsuarioLogado, int idCategoriaFavortitada)
+        {
+            using(OpflixContext ctx = new OpflixContext())
+            {
+                UsuariosCategorias favoritado = new UsuariosCategorias(
+                    idCategoria : idCategoriaFavortitada,
+                    idUsuario : idUsuarioLogado
+                    );
+                ctx.UsuariosCategorias.Add(favoritado);
+                ctx.SaveChanges();
+            }
+        }
+
         public List<Categorias> Listar()
         {
             using (OpflixContext ctx = new OpflixContext())
             {
                 return ctx.Categorias.ToList();
+            }
+        }
+
+        public List<UsuariosCategorias> ListarFavoritos(int idUsuario)
+        {
+            using(OpflixContext ctx = new OpflixContext())
+            {
+                return ctx.UsuariosCategorias.Where(x => x.IdUsuario == idUsuario).ToList();
             }
         }
     }
