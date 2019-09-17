@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Senai.ShirtStore.WebApi.Domains;
@@ -12,39 +11,22 @@ using Senai.ShirtStore.WebApi.Repositories;
 namespace Senai.ShirtStore.WebApi.Controllers
 {
     [Route("api/[controller]")]
-    [Produces("application/json")]
     [ApiController]
-    public class UsuariosController : ControllerBase
+    public class CoresController : ControllerBase
     {
-        IUsuariosRepository IUsuariosRepository;
+        ICoresRepository ICoresRepository;
 
-        public UsuariosController()
+        public CoresController()
         {
-            IUsuariosRepository = new UsuariosRepository();
+            ICoresRepository = new CoresRepository();
         }
 
-        //[Authorize(Roles = "Gerente")]
-        [HttpPost]
-        public IActionResult Cadastrar(Usuarios novoUsuario)
-        {
-            try
-            {
-                IUsuariosRepository.Cadastrar(novoUsuario);
-                return Ok();
-            }
-            catch(Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
-
-        //[Authorize(Roles = "Gerente")]
         [HttpGet]
         public IActionResult Listar()
         {
             try
             {
-                return Ok(IUsuariosRepository.Listar());
+                return Ok(ICoresRepository.Listar());
             }
             catch(Exception ex)
             {
@@ -52,14 +34,25 @@ namespace Senai.ShirtStore.WebApi.Controllers
             }
         }
 
-        [Authorize(Roles = "Gerente")]
-        [HttpPut("{id}")]
-        public IActionResult Atualizar(int id, Usuarios usuarioModificado)
+        [HttpGet("{id}")]
+        public IActionResult BuscarPorId(int id)
         {
             try
             {
-                usuarioModificado.UsuarioId = id;
-                IUsuariosRepository.Atualizar(usuarioModificado);
+                return Ok(ICoresRepository.BuscarPorId(id));
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPost]
+        public IActionResult Cadastrar(Cores novaCor)
+        {
+            try
+            {
+                ICoresRepository.Cadastrar(novaCor);
                 return Ok();
             }
             catch(Exception ex)
@@ -68,13 +61,27 @@ namespace Senai.ShirtStore.WebApi.Controllers
             }
         }
 
-        [Authorize(Roles = "Gerente")]
+        [HttpPut("{id}")]
+        public IActionResult Atualizar(int id, Cores corModificada)
+        {
+            try
+            {
+                corModificada.CorId = id;
+                ICoresRepository.Atualizar(corModificada);
+                return Ok();
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
         [HttpDelete("{id}")]
         public IActionResult Deletar(int id)
         {
             try
             {
-                IUsuariosRepository.Deletar(id);
+                ICoresRepository.Deletar(id);
                 return Ok();
             }
             catch(Exception ex)

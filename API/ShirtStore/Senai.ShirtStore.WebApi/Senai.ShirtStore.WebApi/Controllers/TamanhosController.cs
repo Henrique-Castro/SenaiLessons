@@ -12,25 +12,25 @@ using Senai.ShirtStore.WebApi.Repositories;
 namespace Senai.ShirtStore.WebApi.Controllers
 {
     [Route("api/[controller]")]
-    [Produces("application/json")]
     [ApiController]
-    public class UsuariosController : ControllerBase
+    public class TamanhosController : ControllerBase
     {
-        IUsuariosRepository IUsuariosRepository;
+        ITamanhosRepository ITamanhosRepository;
+        IEmpresasRepository IEmpresasRepository;
 
-        public UsuariosController()
+        public TamanhosController()
         {
-            IUsuariosRepository = new UsuariosRepository();
+            IEmpresasRepository = new EmpresasRepository();
+            ITamanhosRepository = new TamanhosRepository();
         }
 
-        //[Authorize(Roles = "Gerente")]
-        [HttpPost]
-        public IActionResult Cadastrar(Usuarios novoUsuario)
+        [Authorize(Roles = "Gerente")]
+        [HttpGet]
+        public IActionResult Listar()
         {
             try
             {
-                IUsuariosRepository.Cadastrar(novoUsuario);
-                return Ok();
+                return Ok(ITamanhosRepository.Listar());
             }
             catch(Exception ex)
             {
@@ -38,13 +38,28 @@ namespace Senai.ShirtStore.WebApi.Controllers
             }
         }
 
-        //[Authorize(Roles = "Gerente")]
-        [HttpGet]
-        public IActionResult Listar()
+        [Authorize(Roles = "Gerente")]
+        [HttpGet("{id}")]
+        public IActionResult BuscarPorId(int id)
         {
             try
             {
-                return Ok(IUsuariosRepository.Listar());
+                return Ok(ITamanhosRepository.BuscarPorId(id));
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [Authorize(Roles = "Gerente")]
+        [HttpPost]
+        public IActionResult Cadastrar(Tamanhos novoTamanho)
+        {
+            try
+            {
+                ITamanhosRepository.Cadastrar(novoTamanho);
+                return Ok();
             }
             catch(Exception ex)
             {
@@ -54,12 +69,12 @@ namespace Senai.ShirtStore.WebApi.Controllers
 
         [Authorize(Roles = "Gerente")]
         [HttpPut("{id}")]
-        public IActionResult Atualizar(int id, Usuarios usuarioModificado)
+        public IActionResult Atualizar(int id, Tamanhos tamanhoModificado)
         {
             try
             {
-                usuarioModificado.UsuarioId = id;
-                IUsuariosRepository.Atualizar(usuarioModificado);
+                tamanhoModificado.TamanhoId = id;
+                ITamanhosRepository.Atualizar(tamanhoModificado);
                 return Ok();
             }
             catch(Exception ex)
@@ -67,14 +82,13 @@ namespace Senai.ShirtStore.WebApi.Controllers
                 return BadRequest(ex.Message);
             }
         }
-
         [Authorize(Roles = "Gerente")]
         [HttpDelete("{id}")]
         public IActionResult Deletar(int id)
         {
             try
-            {
-                IUsuariosRepository.Deletar(id);
+            {  
+                ITamanhosRepository.Deletar(id);
                 return Ok();
             }
             catch(Exception ex)

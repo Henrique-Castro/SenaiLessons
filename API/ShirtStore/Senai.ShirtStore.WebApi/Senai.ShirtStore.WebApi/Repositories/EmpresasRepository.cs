@@ -20,29 +20,51 @@ namespace Senai.ShirtStore.WebApi.Repositories
                 }
                 else
                 {
-                    throw new Exception(message: "Este usuário não existe ou não pode ser encontrado.");
+                    throw new Exception(message: "Este usuário não existe ou não pôde ser encontrado.");
                 }
             }
         }
 
         public Empresas BuscarPorId(int id)
         {
-            throw new NotImplementedException();
+            using(ShirtContext ctx = new ShirtContext())
+            {
+                return ctx.Empresas.Find(id);
+            }
+        }
+
+        public Empresas BuscarPorNome(string nome)
+        {
+            using(ShirtContext ctx = new ShirtContext())
+            {
+                return ctx.Empresas.FirstOrDefault(x => x.Nome.Equals(nome));
+            }
         }
 
         public void Cadastrar(Empresas novoUsuario)
         {
-            throw new NotImplementedException();
+            using (ShirtContext ctx = new ShirtContext())
+            {
+                ctx.Empresas.Add(novoUsuario);
+                ctx.SaveChanges();
+            }
         }
 
         public void Deletar(int id)
         {
-            throw new NotImplementedException();
+            using (ShirtContext ctx = new ShirtContext())
+            {
+                ctx.Empresas.Remove(BuscarPorId(id));
+                ctx.SaveChanges();
+            }
         }
 
         public List<Empresas> Listar()
         {
-            throw new NotImplementedException();
+            using (ShirtContext ctx = new ShirtContext())
+            {
+                return ctx.Empresas.ToList();
+            }
         }
     }
 }

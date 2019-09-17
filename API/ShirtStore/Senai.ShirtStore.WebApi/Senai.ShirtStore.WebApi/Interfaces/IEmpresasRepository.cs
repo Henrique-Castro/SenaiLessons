@@ -13,5 +13,6 @@ namespace Senai.ShirtStore.WebApi.Interfaces
         void Deletar(int id);
         Empresas BuscarPorId(int id);
         List<Empresas> Listar();
+        Empresas BuscarPorNome(string nome);
     }
 }

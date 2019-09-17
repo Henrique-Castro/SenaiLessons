@@ -22,6 +22,9 @@ namespace Senai.ShirtStore.WebApi.Repositories
                     UsuarioBuscado.Senha = usuarioModificado.Senha != null ? usuarioModificado.Senha : UsuarioBuscado.Senha;
                     UsuarioBuscado.Email = usuarioModificado.Email != null ? usuarioModificado.Email : UsuarioBuscado.Email;
                     UsuarioBuscado.Empresa = usuarioModificado.Empresa != null ? usuarioModificado.Empresa : UsuarioBuscado.Empresa;
+
+                    ctx.Usuarios.Update(UsuarioBuscado);
+                    ctx.SaveChanges();
                 }
                 else
                 {

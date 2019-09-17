@@ -53,6 +53,10 @@ namespace Senai.ShirtStore.WebApi.Domains
                     .HasMaxLength(255)
                     .IsUnicode(false);
 
+                entity.Property(e => e.Tamanho)
+                    .HasMaxLength(5)
+                    .IsUnicode(false);
+
                 entity.HasOne(d => d.CorNavigation)
                     .WithMany(p => p.Camisetas)
                     .HasPrincipalKey(p => p.Nome)
@@ -66,6 +70,12 @@ namespace Senai.ShirtStore.WebApi.Domains
                     .HasForeignKey(d => d.Marca)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__Camisetas__Marca__5AEE82B9");
+
+                entity.HasOne(d => d.TamanhoNavigation)
+                    .WithMany(p => p.Camisetas)
+                    .HasPrincipalKey(p => p.Sigla)
+                    .HasForeignKey(d => d.Tamanho)
+                    .HasConstraintName("FK__Camisetas__Taman__6EF57B66");
             });
 
             modelBuilder.Entity<Cores>(entity =>

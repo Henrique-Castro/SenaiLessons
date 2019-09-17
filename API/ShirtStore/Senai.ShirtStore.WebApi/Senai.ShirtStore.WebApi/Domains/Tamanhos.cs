@@ -7,6 +7,7 @@ namespace Senai.ShirtStore.WebApi.Domains
     {
         public Tamanhos()
         {
+            Camisetas = new HashSet<Camisetas>();
             Estoque = new HashSet<Estoque>();
         }
 
@@ -14,6 +15,7 @@ namespace Senai.ShirtStore.WebApi.Domains
         public string Sigla { get; set; }
         public string Nome { get; set; }
 
+        public ICollection<Camisetas> Camisetas { get; set; }
         public ICollection<Estoque> Estoque { get; set; }
     }
 }

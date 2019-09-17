@@ -37,7 +37,7 @@ namespace Senai.ShirtStore.WebApi.Controllers
                       new Claim(JwtRegisteredClaimNames.Email, UsuarioEncontrado.Email),
                       new Claim(JwtRegisteredClaimNames.Jti, UsuarioEncontrado.UsuarioId.ToString()),
                       new Claim(ClaimTypes.Role, UsuarioEncontrado.Perfil)
-                      //,new Claim("String" , UsuarioEncontrado.Empresa)
+                      ,new Claim("String" , UsuarioEncontrado.Empresa)
                 };
 
                 var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("shirtstore-chave-autenticação"));

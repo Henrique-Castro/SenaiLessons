@@ -14,23 +14,22 @@ namespace Senai.ShirtStore.WebApi.Controllers
     [Route("api/[controller]")]
     [Produces("application/json")]
     [ApiController]
-    public class UsuariosController : ControllerBase
+    public class EmpresasController : ControllerBase
     {
-        IUsuariosRepository IUsuariosRepository;
+        IEmpresasRepository IEmpresasRepository;
 
-        public UsuariosController()
+        public EmpresasController()
         {
-            IUsuariosRepository = new UsuariosRepository();
+            IEmpresasRepository = new EmpresasRepository();
         }
 
-        //[Authorize(Roles = "Gerente")]
-        [HttpPost]
-        public IActionResult Cadastrar(Usuarios novoUsuario)
+
+        [HttpGet]
+        public IActionResult Listar()
         {
             try
             {
-                IUsuariosRepository.Cadastrar(novoUsuario);
-                return Ok();
+                return Ok(IEmpresasRepository.Listar());
             }
             catch(Exception ex)
             {
@@ -38,13 +37,27 @@ namespace Senai.ShirtStore.WebApi.Controllers
             }
         }
 
-        //[Authorize(Roles = "Gerente")]
-        [HttpGet]
-        public IActionResult Listar()
+        [HttpGet("{id}")]
+        public IActionResult BuscarPorId(int id)
         {
             try
             {
-                return Ok(IUsuariosRepository.Listar());
+                return Ok(IEmpresasRepository.BuscarPorId(id));
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [Authorize(Roles = "Gerente")]
+        [HttpPost]
+        public IActionResult Cadastrar(Empresas novaEmpresa)
+        {
+            try
+            {
+                IEmpresasRepository.Cadastrar(novaEmpresa);
+                return Ok();
             }
             catch(Exception ex)
             {
@@ -54,12 +67,12 @@ namespace Senai.ShirtStore.WebApi.Controllers
 
         [Authorize(Roles = "Gerente")]
         [HttpPut("{id}")]
-        public IActionResult Atualizar(int id, Usuarios usuarioModificado)
+        public IActionResult Atualizar(int id, Empresas empresaModificada)
         {
             try
             {
-                usuarioModificado.UsuarioId = id;
-                IUsuariosRepository.Atualizar(usuarioModificado);
+                empresaModificada.EmpresaId = id;
+                IEmpresasRepository.Atualizar(empresaModificada);
                 return Ok();
             }
             catch(Exception ex)
@@ -73,8 +86,12 @@ namespace Senai.ShirtStore.WebApi.Controllers
         public IActionResult Deletar(int id)
         {
             try
-            {
-                IUsuariosRepository.Deletar(id);
+            {  
+                if(IEmpresasRepository.BuscarPorId(id) == null)
+                {
+                    return NotFound();
+                }
+                IEmpresasRepository.Deletar(id);
                 return Ok();
             }
             catch(Exception ex)
